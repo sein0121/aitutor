@@ -1,0 +1,10 @@
+{
+  "rsp_code" : 200,
+  "result": {
+    "user_nm": "이지무",
+    "class_gbn" : "고1-1",
+    "class_nm" : "AI튜터 수학",
+    "teacher_nm": "이브리",
+    "user_pw": "q1w2e3r4t5"
+  }
+}

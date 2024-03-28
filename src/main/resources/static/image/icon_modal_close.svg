@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" viewBox="0 0 12 12">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_80" data-name="사각형 80" width="12" height="12" fill="none" stroke="#cfcfcf" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="닫기버튼" transform="translate(0 0)">
+    <g id="그룹_73" data-name="그룹 73" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <line id="선_59" data-name="선 59" x2="11.199" y2="11.199" transform="translate(0.401 0.401)" fill="none" stroke="#cfcfcf" stroke-linecap="round" stroke-width="1.431"/>
+      <line id="선_60" data-name="선 60" x1="11.199" y2="11.199" transform="translate(0.401 0.401)" fill="none" stroke="#cfcfcf" stroke-linecap="round" stroke-width="1.431"/>
+    </g>
+  </g>
+</svg>

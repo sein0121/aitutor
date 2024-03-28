@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.agilesoda.aitutor.repository.mapper.ClassInfoRepository">
+
+    <select id="checkExistClass" parameterType="String" resultType="int">
+        select exists(select class_id from class_info where org_id = #{org_id} and class_id = #{class_id})
+    </select>
+
+    <delete id="deleteClass" parameterType="String">
+        DELETE FROM class_info WHERE org_id = #{org_id} AND class_id = #{class_id} AND mgr_id = #{user_id}
+    </delete>
+
+    <delete id="deleteClassAdmin" parameterType="String">
+        DELETE FROM class_info WHERE org_id = #{org_id} AND class_id = #{class_id}
+    </delete>
+
+    <select id="selectClassName" parameterType="String" resultType="String">
+        select class_nm
+        from class_info
+        where org_id = #{org_id}
+    </select>
+
+    <select id="insertClass" parameterType="com.agilesoda.aitutor.dto.tutor.InsertClassRequestDto">
+        INSERT INTO class_info (org_id, class_id, class_nm, class_gbn, mgr_id, user_grd, user_test_grd, class_state, create_date)
+        VALUES (#{org_id}, #{class_id}, #{class_nm}, #{class_gbn}, #{mgr_id}, #{user_grd}, #{user_test_grd}, #{class_state}, #{created_date})
+    </select>
+
+    <select id="getClassList" parameterType="String" resultType="String">
+        select class_id
+        from class_info
+        where org_id = #{org_id}
+          and mgr_id = #{mgr_id}
+    </select>
+
+    <select id="getClassDetailInfo" parameterType="String"
+            resultType="com.agilesoda.aitutor.dto.tutor.ClassDetailInfoDto">
+        select class_id, class_nm, class_gbn
+        from class_info
+        where org_id = #{org_id}
+          and mgr_id = #{mgr_id}
+          and class_id = #{class_id}
+        limit 1
+    </select>
+
+    <update id = "changeAndminClass" parameterType="String" >
+        UPDATE class_info SET mgr_id =#{new_teacher_id}
+        WHERE org_id= #{org_id}
+          AND class_id = #{class_id}
+          AND mgr_id = #{teacher_id}
+
+    </update>
+
+    <select id="selectClassInfo" parameterType="String" resultType="com.agilesoda.aitutor.domain.ClassInfo">
+        select class_nm, class_gbn, mgr_id, user_grd, user_test_grd
+        from class_info
+        where org_id = #{org_id}
+        and class_id = #{class_id}
+    </select>
+
+    <select id="selectMgrId" parameterType="String" resultType="String">
+        select mgr_id
+        from class_info
+        where org_id = #{org_id}
+          and class_id = #{class_id}
+    </select>
+
+    <select id="getClassDetailInfoAdmin" parameterType="String"
+            resultType="com.agilesoda.aitutor.dto.tutor.ClassDetailInfoDto">
+        select class_id, class_nm, class_gbn
+        from class_info
+        where org_id = #{org_id}
+          and class_id = #{class_id}
+        limit 1
+    </select>
+
+    <select id="selectAllClassInfo" parameterType="String" resultType="String">
+        select DISTINCT class_id
+        from class_info
+        where org_id = #{org_id}
+          and mgr_id = #{user_id}
+        ORDER BY create_date DESC
+    </select>
+
+    <select id="selectAllClassInfoAdmin" parameterType="String" resultType="String">
+        select DISTINCT class_id
+        from class_info
+        where org_id = #{org_id}
+        ORDER BY create_date DESC
+    </select>
+
+    <select id="selectAllClassInfoBySearchAll" parameterType="String" resultType="String">
+        select DISTINCT class_id
+        from class_info
+        where org_id = #{org_id}
+          and mgr_id = #{user_id}
+          and (class_id like #{search_nm} ESCAPE '#' or user_grd like #{search_nm} ESCAPE '#' or user_test_grd like #{search_nm} ESCAPE '#')
+        ORDER BY create_date DESC
+    </select>
+
+    <select id="selectAllClassInfoBySearchGrade" parameterType="String" resultType="String">
+        select DISTINCT class_id
+        from class_info
+        where org_id = #{org_id}
+          and mgr_id = #{user_id}
+          and user_grd like #{search_nm} ESCAPE '#'
+        ORDER BY create_date DESC
+    </select>
+
+    <select id="selectAllClassInfoBySearchClass" parameterType="String" resultType="String">
+        select DISTINCT class_id
+        from class_info
+        where org_id = #{org_id}
+          and mgr_id = #{user_id}
+          and class_id like #{search_nm} ESCAPE '#'
+        ORDER BY create_date DESC
+    </select>
+
+    <select id="selectAllClassInfoBySearchAllAdmin" parameterType="String" resultType="String">
+        select DISTINCT ci.class_id
+        from class_info as ci
+                 inner join user_info as ui on ui.org_id = ci.org_id AND ui.user_id = ci.mgr_id
+        where ci.org_id = #{org_id}
+          and (ci.class_id like #{search_nm} ESCAPE '#'
+            or ci.user_grd like #{search_nm} ESCAPE '#' or ci.user_test_grd like #{search_nm} ESCAPE '#' or ui.user_nm like #{search_nm} ESCAPE '#')
+        ORDER BY ci.create_date DESC
+    </select>
+
+    <select id="selectAllClassInfoBySearchGradeAdmin" parameterType="String" resultType="String">
+        select DISTINCT class_id
+        from class_info
+        where org_id = #{org_id}
+          and user_grd like #{search_nm} ESCAPE '#'
+        ORDER BY create_date DESC
+    </select>
+
+    <select id="selectAllClassInfoBySearchClassAdmin" parameterType="String" resultType="String">
+        select DISTINCT class_id
+        from class_info
+        where org_id = #{org_id}
+          and class_id like #{search_nm} ESCAPE '#'
+        ORDER BY create_date DESC
+    </select>
+
+</mapper>

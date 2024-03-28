@@ -1,0 +1,250 @@
+{
+  "code": 200,
+  "result": {
+      "student_list": [
+        {
+          "user_grd": "초1-1",
+          "student_id": "학생01",
+          "class_nm": "클래스1",
+          "user_qst_level": "01",
+          "user_state": "1",
+          "test_rate": 85,
+          "created_date": "20220616"
+        },
+        {
+          "user_grd": "초3-1",
+          "student_id": "학생02",
+          "class_nm": "불꽃수학",
+          "user_qst_level": "01",
+          "user_state": "1",
+          "test_rate": 25,
+          "created_date": "20220524"
+        },
+        {
+          "user_grd": "초1-2",
+          "student_id": "학생03",
+          "class_nm": "클래스1",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 15,
+          "created_date": "20220721"
+        },
+        {
+          "user_grd": "초6-1",
+          "student_id": "sksmscjswo",
+          "class_nm": "잘한다",
+          "user_qst_level": "01",
+          "user_state": "0",
+          "test_rate": 55,
+          "created_date": "20220615"
+        },
+        {
+          "user_grd": "초4-1",
+          "student_id": "std01",
+          "class_nm": "모지리",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 27,
+          "created_date": "20220405"
+        },
+        {
+          "user_grd": "초1-2",
+          "student_id": "jjangjjang",
+          "class_nm": "쫌하네여",
+          "user_qst_level": "01",
+          "user_state": "1",
+          "test_rate": 55,
+          "created_date": "20220409"
+        },
+        {
+          "user_grd": "초2-2",
+          "student_id": "학생07",
+          "class_nm": "영재",
+          "user_qst_level": "03",
+          "user_state": "1",
+          "test_rate": 38,
+          "created_date": "20220414"
+        },
+        {
+          "user_grd": "초2-1",
+          "student_id": "김천재",
+          "class_nm": "쫌하네",
+          "user_qst_level": "03",
+          "user_state": "1",
+          "test_rate": 42,
+          "created_date": "20220220"
+        },
+        {
+          "user_grd": "초3-1",
+          "student_id": "안녕",
+          "class_nm": "class3-1",
+          "user_qst_level": "01",
+          "user_state": "1",
+          "test_rate": 25,
+          "created_date": "20220125"
+        },
+        {
+          "user_grd": "초1-2",
+          "student_id": "nice0522",
+          "class_nm": "옥수최강",
+          "user_qst_level": "01",
+          "user_state": "0",
+          "test_rate": 12,
+          "created_date": "20220326"
+        },
+        {
+          "user_grd": "초4-2",
+          "student_id": "59332",
+          "class_nm": "hype42",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 95,
+          "created_date": "20220520"
+        },
+        {
+          "user_grd": "초5-1",
+          "student_id": "옥수짱",
+          "class_nm": "다들안녕",
+          "user_qst_level": "03",
+          "user_state": "1",
+          "test_rate": 100,
+          "created_date": "20220720"
+        },
+        {
+          "user_grd": "초5-2",
+          "student_id": "jaejun123",
+          "class_nm": "화이팅",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 25,
+          "created_date": "20220416"
+        },
+        {
+          "user_grd": "초3-2",
+          "student_id": "뉴진스",
+          "class_nm": "달려보자",
+          "user_qst_level": "03",
+          "user_state": "1",
+          "test_rate": 75,
+          "created_date": "20220502"
+        },
+        {
+          "user_grd": "초4-1",
+          "student_id": "디토",
+          "class_nm": "수학고고",
+          "user_qst_level": "01",
+          "user_state": "0",
+          "test_rate": 27,
+          "created_date": "20220607"
+        },
+        {
+          "user_grd": "초3-1",
+          "student_id": "옥수대장",
+          "class_nm": "옥수수학",
+          "user_qst_level": "01",
+          "user_state": "1",
+          "test_rate": 52,
+          "created_date": "20220220"
+        },
+        {
+          "user_grd": "초2-2",
+          "student_id": "나학생",
+          "class_nm": "수학22",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 66,
+          "created_date": "20220201"
+        },
+        {
+          "user_grd": "초6-2",
+          "student_id": "나1122",
+          "class_nm": "6학년2반모여라",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 5,
+          "created_date": "20220820"
+        },
+        {
+          "user_grd": "초1-1",
+          "student_id": "병아리",
+          "class_nm": "클래스1",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 41,
+          "created_date": "20220313"
+        },
+        {
+          "user_grd": "초1-1",
+          "student_id": "크크",
+          "class_nm": "병아리반",
+          "user_qst_level": "03",
+          "user_state": "1",
+          "test_rate": 50,
+          "created_date": "20220120"
+        },
+        {
+          "user_grd": "초6-1",
+          "student_id": "새싹이",
+          "class_nm": "클래스6",
+          "user_qst_level": "01",
+          "user_state": "0",
+          "test_rate": 25,
+          "created_date": "20220311"
+        },
+        {
+          "user_grd": "초5-2",
+          "student_id": "cute905",
+          "class_nm": "수학52",
+          "user_qst_level": "03",
+          "user_state": "1",
+          "test_rate": 72,
+          "created_date": "20220807"
+        },
+        {
+          "user_grd": "초4-1",
+          "student_id": "duswls123",
+          "class_nm": "모지리들",
+          "user_qst_level": "01",
+          "user_state": "1",
+          "test_rate": 65,
+          "created_date": "20220820"
+        },
+        {
+          "user_grd": "초1-1",
+          "student_id": "gPwjd77",
+          "class_nm": "병아리반",
+          "user_qst_level": "02",
+          "user_state": "1",
+          "test_rate": 45,
+          "created_date": "20221127"
+        },
+        {
+          "user_grd": "초2-2",
+          "student_id": "auddh96",
+          "class_nm": "수학도전",
+          "user_qst_level": "03",
+          "user_state": "1",
+          "test_rate": 55,
+          "created_date": "20221017"
+        },
+        {
+          "user_grd": "초3-2",
+          "student_id": "마리오",
+          "class_nm": "수포자들",
+          "user_qst_level": "03",
+          "user_state": "0",
+          "test_rate": 15,
+          "created_date": "20220911"
+        },
+        {
+          "user_grd": "초2-1",
+          "student_id": "cool5565",
+          "class_nm": "쫌하네",
+          "user_qst_level": "01",
+          "user_state": "1",
+          "test_rate": 32,
+          "created_date": "20221102"
+        }
+      ]
+    }
+}

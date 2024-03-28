@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>EduSoDA[관리자] - 클래스 상세</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="gnb">
+        <div class="left_wrap">
+            <a href="/aitutor/admin/O_list" id="logo"><div class="logo"></div></a>
+            <a href="/aitutor/admin/O_list" style="color:#ffffff;"><div class="sys_name">EduSoDA<span id = org-name></span></div></a>
+        </div>
+        <div class="center_wrap menu">
+            <a href="/aitutor/admin/O_list"><span class="current"><img src="/image/gnb_icon_class.svg">클래스 관리</span></a>
+            <a href="/aitutor/admin/classmain"><span><img src="/image/gnb_icon_status.svg">클래스 현황</span></a>
+        </div>
+        <div class="right_wrap">
+            <div class="user" id="user_open_btn">
+                <div class="user_modal" id="user_modal">
+                    <ul>
+                        <li><a href="/aitutor/admin/S_admin" style="color:#ffffff;">마이페이지</a></li>
+                        <li id="logout">로그아웃</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help" id="help"></div>
+        </div>
+    </div>
+    <div class="content tpage">
+        <div class="topcontentbox">
+            <div class="inner">
+                <div class="infogroup">
+                    <div class="title">
+                        <h2>기본정보</h2>
+                        <div class="btnbox" style="display: none" >
+                            <button type="button" disabled><i><img src="/image/icon_save.svg"></i>저장</button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th style="width: 15%;">클래스이름</th>
+                                <th style="width: 15%;">학년</th>
+                                <th style="width: 15%;">인원수</th>
+                                <th>테스트 학년</th>
+                                <th style="width: 15%;">테스트 완료율</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td id="class_nm" ></td>
+                                <td id="class_gbn"></td>
+                                <td id="class_count"></td>
+                                <!--                                <td id="class_test_level"></td>-->
+                                <td>
+                                    <input type="radio" name="test" checked="true">클래스 동일
+                                    <!--                                    <input type="radio" name="test" disabled>학생별-->
+                                    <select disabled style="margin-left: 10px;">
+                                        <option id="class-test-level"></option>
+                                        <!--                                        <option>두번째 선택항목</option>-->
+                                        <!--                                        <option>세번째 선택항목</option>-->
+                                    </select>
+                                    <input type="radio" name="test" disabled><label style="color:#9EA4B2">학생별</label>
+                                </td>
+                                <td><span class="textcolor01" id="com_rate"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="contentbox">
+            <div class="inner col2">
+                <div>
+                    <div class="title">
+                        <h3>테스트 미완료 학생</h3>
+                        <div class="btnbox">
+                            <select onchange="proValue(this)">
+                                <option>선택</option>
+                                <option value="ASC_proId">아이디 오름차순</option>
+                                <option value="DESC_proId">아이디 내림차순</option>
+                                <option value="ASC_proLevel">테스트 단계 오름차순</option>
+                                <option value="DESC_proLevel">테스트 단계 내림차순</option>
+                            </select>
+                            <button type="button" class="btn_gray" id="pro_excel"><i><img src="/image/ico_download.svg"></i>엑셀다운로드</button>
+                        </div>
+                    </div>
+                    <div class="table" style="height: 440px;">
+                        <table class="scroll" id="table_progress">
+                            <thead>
+                            <tr>
+                                <th style="width: 30%;">사용자 ID</th>
+                                <th style="width: 40%;">테스트 단계</th>
+                                <th style="width: 30%;">진행율</th>
+                            </tr>
+                            </thead>
+                            <tbody id = "test_progress" style="max-height: 400px; overflow-y: auto; display: block;">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="title">
+                        <h3>테스트 완료 학생</h3>
+                        <div class="btnbox">
+                            <select onchange="comValue(this)">
+                                <option>선택</option>
+                                <option value="ASC_comId">아이디 오름차순</option>
+                                <option value="DESC_comId">아이디 내림차순</option>
+                            </select>
+                            <button type="button" class="btn_gray" id="com_excel"><i><img src="/image/ico_download.svg"></i>엑셀다운로드</button>
+                        </div>
+                    </div>
+                    <div class="table" style="height: 440px;">
+                        <table class="scroll" id="table_complete">
+                            <thead>
+                            <tr>
+                                <th style="width: 20%;">사용자 ID</th>
+                                <th style="width: 60%;">결과</th>
+                                <th style="width: 20%;">상태</th>
+                            </tr>
+                            </thead>
+                            <tbody id="test_complete" style="max-height: 400px; overflow-y: auto; display: block;">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="btnbox bottom"><button type="button" id="class_list_btn" class="btn_darkgray"  onclick="history.go(-1);">이전으로</button></div>
+        </div>
+    </div>
+    <div id="modal_save">
+        <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+        <div class="icon"><img src="/image/icon_download.svg"></div>
+        <p>사용 가이드 다운로드</p>
+        <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+        <div class="btngroup">
+            <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+            <button type="text" id="save">확인</button>
+        </div>
+    </div>
+    <div id="modal_bg"></div>
+</div>
+
+<!--Script-->
+<script th:src="@{/js/O_detail.js}"></script>
+<script th:src="@{/js/insertOrgNm.js}"></script>
+<script th:src="@{/js/moveMypage.js}"></script>
+<script th:src="@{/js/logout.js}"></script>
+<script th:src="@{/js/save.js}"></script>
+<script th:src="@{/js/api-lib.js}"></script>
+<script th:src="@{/js/api.js}"></script>
+
+<!--excel export-->
+<script th:src="@{/js/excel_export.js}"></script>
+
+</body>
+</html>

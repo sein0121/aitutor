@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+    <title>EduSoDA - 메인 페이지</title>
+</head>
+<!--<body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="">-->
+<body>
+    <div class="container">
+        <div class="gnb">
+            <div class="left_wrap">
+                <a href=""><div class="logo"></div></a>
+                <a href="" style="color:#ffffff;"><div class="sys_name">EduSoDA<span id="org_nm"></span></div></a>
+            </div>
+            <div class="right_wrap">
+                <div class="user" id="user_open_btn">
+                    <div class="user_modal" id="user_modal">
+                        <ul>
+                            <li onclick="moveMypage()">마이페이지</li>
+                            <li id="logout">로그아웃</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help" id="help"></div>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="intro_box">
+                <div class="mainbox">
+                    <p>현재 나의 수학 실력은?</p>
+                    <span><img src="/image/img_main.png"></span>
+                    <button type="button" class="btn_purple btn_start" id="btn-start">테스트 </button>
+                </div>
+            </div>
+            <div class="video_frame">
+                <video src="/image/video/1088557367-hd.mov" autoplay muted loop></video>
+            </div>
+        </div>
+        <div id="modal_save">
+            <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+            <div class="icon"><img src="/image/icon_download.svg"></div>
+            <p>사용 가이드 다운로드</p>
+            <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+            <div class="btngroup">
+                <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+                <button type="text" id="save">확인</button>
+            </div>
+        </div>
+        <div id="modal_bg"></div>
+    </div>
+    <!-- script -->
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/js/save.js}"></script>
+    <script th:src="@{/js/logout.js}"></script>
+    <script th:src="@{/js/moveMypage.js}"></script>
+    <script th:src="@{/js/api-lib.js}"></script>
+    <script th:src="@{/js/api.js}"></script>
+</body>
+</html>

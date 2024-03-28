@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.agilesoda.aitutor.repository.mapper.UserQstInfoRepository">
+
+    <select id="selectTestQstList" parameterType="com.agilesoda.aitutor.dto.RequestDto"
+            resultType="com.agilesoda.aitutor.dto.student.QstInfoDto">
+        SELECT uqi.qst_id         as qst_id,
+               ui.edu_level_nm    as edu_level_nm,
+               ui.unit_nm         as unit_nm,
+               qi.qst_img_file_nm as qst_img_file_nm,
+               uqi.submit_answer  as submit_answer,
+               uqi.qst_seq        as qst_seq
+        FROM user_qst_info AS uqi
+                 INNER JOIN qst_info AS qi ON qi.qst_id = uqi.qst_id
+                 INNER JOIN unit_info AS ui ON ui.unit_id = qi.qst_unit_id
+        where uqi.org_id = #{org_id}
+          and uqi.user_id = #{user_id}
+          and uqi.user_grd = #{user_grd}
+          and uqi.user_test_grd = #{user_test_grd}
+          and uqi.user_test_level = #{user_test_level}
+        ORDER BY qst_seq
+    </select>
+
+    <select id="selectUserTestLevel" parameterType="String" resultType="String">
+        select distinct user_test_level
+        from user_qst_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+    </select>
+
+    <select id="selectTutorUserTestLevel" parameterType="String" resultType="String">
+        select distinct user_test_level
+        from user_qst_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+    </select>
+
+    <select id="selectStudentDetail" parameterType="String" resultType="String">
+        SELECT distinct uqi.user_test_level as user_test_level
+        FROM user_qst_info AS uqi
+                 INNER JOIN user_info AS ui ON uqi.user_id = ui.user_id
+        WHERE uqi.user_id IN (SELECT ui.user_id
+                              FROM user_info AS ui
+                              WHERE ui.class_id IN (SELECT ci.class_id
+                                                    FROM class_info AS ci
+                                                    WHERE ci.mgr_id=#{mgr_id}
+                                                      AND ci.org_id=#{org_id}))
+        AND uqi.user_grd = #{user_grd}
+        AND uqi.user_test_grd = #{user_test_grd}
+    </select>
+
+    <select id="selectQstInfo" parameterType="com.agilesoda.aitutor.dto.StudentResultRequestDto"
+            resultType="com.agilesoda.aitutor.dto.student.QstListDto">
+        select qi.qst_id, uni.unit_nm, uqi.submit_answer, qi.qst_answer, qi.qst_img_file_nm, uni.edu_level_nm
+        from user_qst_info as uqi
+                 inner join qst_info as qi on qi.qst_id = uqi.qst_id
+                 inner join unit_info as uni on uni.unit_id = qi.qst_unit_id
+        where uqi.org_id = #{org_id}
+          and uqi.user_id = #{user_id}
+          and uqi.user_grd = #{user_grd}
+          and uqi.user_test_grd = #{user_test_grd}
+          and uqi.user_test_level = #{user_test_level}
+        order by uqi.qst_seq
+    </select>
+
+    <select id="selectTutorQstInfo" parameterType="com.agilesoda.aitutor.dto.tutor.TutorStudentRequestDto"
+            resultType="com.agilesoda.aitutor.dto.student.QstListDto">
+        select qi.qst_id, uni.unit_nm, uqi.submit_answer, qi.qst_answer, qi.qst_img_file_nm, uni.edu_level_nm
+        from user_qst_info as uqi
+                 inner join qst_info as qi on qi.qst_id = uqi.qst_id
+                 inner join unit_info as uni on uni.unit_id = qi.qst_unit_id
+        where uqi.org_id = #{org_id}
+          and uqi.user_id = #{user_id}
+          and uqi.user_grd = #{user_grd}
+          and uqi.user_test_level = #{user_test_level}
+    </select>
+
+
+    <select id="selectGbnInfo" parameterType="com.agilesoda.aitutor.dto.StudentResultRequestDto" resultType="String">
+        select distinct temp_gbn
+        from user_qst_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+          and user_test_level = #{user_test_level}
+    </select>
+
+    <select id="selectTutorGbnInfo" parameterType="com.agilesoda.aitutor.dto.tutor.TutorStudentRequestDto" resultType="String">
+        select distinct temp_gbn
+        from user_qst_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_level = #{user_test_level}
+    </select>
+
+
+    <select id="selectSubmit" parameterType="com.agilesoda.aitutor.domain.UserQstInfo" resultType="string">
+        select submit_answer
+        from user_qst_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+          and qst_id = #{qstId}
+        limit 1
+    </select>
+
+    <update id="updateSubmit" parameterType="com.agilesoda.aitutor.domain.UserQstInfo">
+        update user_qst_info
+        set submit_answer = #{submitAnswer}, temp_gbn = '0'
+        <if test="submitDate != null">
+            , submit_date = #{submitDate}
+        </if>
+        <if test="chgDate != null">
+            , chg_date = #{chgDate}
+        </if>
+        where org_id = #{orgId}
+        and user_id = #{userId}
+        and user_grd = #{userGrd}
+        and user_test_grd = #{userTestGrd}
+        and user_test_level = #{userTestLevel}
+        and qst_id = #{qstId}
+    </update>
+
+    <update id="updateTempGbn" parameterType="com.agilesoda.aitutor.domain.UserQstInfo">
+        update user_qst_info
+        set temp_gbn = #{tempGbn}
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+    </update>
+
+    <select id="selectAnswerList" parameterType="com.agilesoda.aitutor.domain.UserQstInfo"
+            resultType="com.agilesoda.aitutor.dto.student.QstResultDto">
+        SELECT uqi.qst_id, uqi.submit_answer, qi.qst_answer
+        FROM user_qst_info AS uqi
+        INNER JOIN qst_info AS qi ON qi.qst_id = uqi.qst_id
+        WHERE uqi.org_id = #{orgId}
+        and uqi.user_id = #{userId}
+        and uqi.user_grd = #{userGrd}
+        and uqi.user_test_grd = #{userTestGrd}
+        and uqi.user_test_level = #{userTestLevel}
+        ORDER BY chg_date
+        <!--        <if test="userTestLevel == '01'">
+                    and uqi.user_test_level = '01'
+                </if>
+                <if test="userTestLevel == '02'">
+                    and uqi.user_test_level in ('01', '02')
+                </if>
+                <if test="userTestLevel == '03'">
+                    and uqi.user_test_level in ('01', '02', '03')
+                </if>-->
+    </select>
+
+    <select id="selectAnswerList2" parameterType="com.agilesoda.aitutor.domain.UserQstInfo"
+            resultType="com.agilesoda.aitutor.dto.student.QstResultDto">
+        SELECT uqi.qst_id, uqi.submit_answer, qi.qst_answer
+        FROM user_qst_info AS uqi
+        INNER JOIN qst_info AS qi ON qi.qst_id = uqi.qst_id
+        WHERE uqi.org_id = #{orgId}
+        and uqi.user_id = #{userId}
+        and uqi.user_grd = #{userGrd}
+        and uqi.user_test_grd = #{userTestGrd}
+        and uqi.user_test_level = #{userTestLevel}
+        ORDER BY chg_date
+        <!--        <if test="userTestLevel == '01'">
+                    and uqi.user_test_level = '01'
+                </if>
+                <if test="userTestLevel == '02'">
+                    and uqi.user_test_level in ('01', '02')
+                </if>
+                <if test="userTestLevel == '03'">
+                    and uqi.user_test_level in ('01', '02', '03')
+                </if>-->
+    </select>
+
+    <select id="selectAnswerListAndQstAnswer" parameterType="com.agilesoda.aitutor.domain.UserQstInfo"
+            resultType="com.agilesoda.aitutor.dto.student.QstResultDto">
+        SELECT uqi.qst_id, uqi.submit_answer, qi.qst_answer
+        FROM user_qst_info AS uqi
+                 INNER JOIN qst_info AS qi ON qi.qst_id = uqi.qst_id
+        WHERE uqi.org_id = #{orgId}
+          and uqi.user_id = #{userId}
+          and uqi.user_grd = #{userGrd}
+          and uqi.user_test_grd = #{userTestGrd}
+          and uqi.user_test_level = #{userTestLevel}
+        ORDER BY qst_seq
+    </select>
+
+    <insert id="saveQst" parameterType="com.agilesoda.aitutor.domain.UserQstInfo">
+        INSERT INTO user_qst_info (org_id, user_id, user_grd, user_test_grd, user_test_level, qst_seq, qst_id,
+                                   create_date, submit_answer)
+        VALUES (#{orgId}, #{userId}, #{userGrd}, #{userTestGrd}, #{userTestLevel}, #{qstSeq}, #{qstId}, #{createDate}, #{submitAnswer})
+    </insert>
+
+    <select id="checkTestDate" parameterType="com.agilesoda.aitutor.dto.RequestDto"
+            resultType="String">
+        SELECT test_date
+        FROM user_qst_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+          and user_test_level = #{user_test_level}
+        limit 1
+    </select>
+
+    <update id="updateTestDate" parameterType="String">
+        update user_qst_info
+        set test_date = #{testDate}
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+    </update>
+
+    <select id="selectTempGbnNullCount" parameterType="com.agilesoda.aitutor.domain.UserQstInfo" resultType="int">
+        select count(*)
+        from user_qst_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+          and temp_gbn is null
+    </select>
+
+    <select id="selectUserMaxTestLevel" parameterType="String" resultType="String">
+        select distinct MAX(user_test_level)
+        from user_qst_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+    </select>
+
+    <delete id="deleteExceptionData" parameterType="String">
+        DELETE
+        FROM user_qst_info
+        WHERE org_id = #{orgId}
+        AND user_id = #{userId}
+        <if test="userGrd != null">
+            AND user_grd = #{userGrd}
+        </if>
+        <if test="userGrd != null">
+            AND user_test_grd = #{userTestGrd}
+        </if>
+
+    </delete>
+</mapper>

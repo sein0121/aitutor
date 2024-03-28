@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>EduSoDA[관리자] - 클래스 관리</title>
+</head>
+<body>
+<div class="container">
+    <div class="gnb">
+        <div class="left_wrap">
+            <a href="/aitutor/admin/O_list"><div class="logo"></div></a>
+            <a href="/aitutor/admin/O_list"><div class="sys_name">EduSoDA<span id="org-name"></span></div>
+        </div>
+        <div class="center_wrap menu">
+            <span class="current"><img src="/image/gnb_icon_class.svg">클래스 관리</span>
+            <a href="/aitutor/admin/classmain"><span><img src="/image/gnb_icon_status.svg">클래스 현황</span></a>
+        </div>
+        <div class="right_wrap">
+            <div class="user">
+                <div class="user" id="user_open_btn">
+                    <div class="user_modal" id="user_modal">
+                        <ul>
+                            <li><a href="/aitutor/admin/S_admin" style="color: #ffffff">마이페이지</a></li>
+                            <li id="logout">로그아웃</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="help" id="help"></div>
+        </div>
+    </div>
+    <div class="content tpage">
+        <div class="topcontentbox">
+            <div class="inner">
+                <div class="tabgroup">
+                    <!--current -> 선택 항목 -->
+                    <span class = "current" id="now-class">클래스</span>
+                    <span id="now-student">학생</span>
+                </div>
+            </div>
+        </div>
+        <!-- 클래스탭 -->
+        <div class="contentbox" id="class-content">
+            <div class="inner">
+                <div class="search_area">
+                    <div>
+                        <select id="class-search" style="cursor:pointer;">
+                            <option value="all">전체</option>
+                            <option value="grade">학년(학기)</option>
+                            <option value="class">클래스</option>
+                        </select>
+                        <input type="text" class="search" id="class-searching" onkeyup="enterClass();" placeholder="Search..."  autocomplete="off">
+                        <button type="button" class="refresh" id="class-refresh"><img src="/image/ico refresh .svg"></button>
+                    </div>
+                    <div class="btnbox">
+                        <select id="class-sort" style="cursor:pointer;">
+                            <option value="created_date">최신 등록 순</option>
+                            <option value="class_gbn">학년 순</option>
+                            <option value="class_nm">클래스 가나다 순</option>
+                        </select>
+                        <button type="button" id="btn_delete"><i><img src="/image/icon_delete.svg"></i>삭제</button>
+                        <button type="button" id="btn_new"><i><img src="/image/icon_add.svg"></i>등록</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="table">
+                        <table id="class-table">
+                            <thead>
+                            <tr>
+                                <th style="width: 90px;"><input type="checkbox" id="checkAll"></th>
+                                <th>학년</th>
+                                <th>클래스이름</th>
+                                <th>담당자</th>
+                                <th>인원수</th>
+                                <th>테스트학년</th>
+                                <th>테스트완료율</th>
+                                <th style="width: 90px;"></th>
+                            </tr>
+                            </thead>
+                            <tbody id="class-body">
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 페이지네이션 -->
+                    <div class="pagination">
+                        <ul id="class-pagination">
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 학생탭 -->
+        <div class="contentbox" id="student-content" style="display:none">
+            <div class="inner">
+                <div class="search_area">
+                    <div>
+                        <select id="student-search" style="cursor:pointer;">
+                            <option value="all">전체</option>
+                            <option value="grade">학년(학기)</option>
+                            <option value="class">클래스</option>
+                        </select>
+                        <input type="text" class="search" id="student-searching" onkeyup="enterStudent();" placeholder="Search..."  autocomplete="off">
+                        <button type="button" class="refresh" id="student-refresh"><img src="/image/ico refresh .svg"></button>
+                    </div>
+                    <div class="btnbox">
+                        <select id="student-sort" style="cursor:pointer;">
+                            <option value="created_date">최신 등록 순</option>
+                            <option value="user_grd">학년 순</option>
+                            <option value="class_nm">클래스 가나다 순</option>
+                        </select>
+                        <button type="button" id="btn_selstud"><i><img src="/image/icon_delete.svg"></i>삭제</button>
+                        <button type="button" id="btn_newstud"><i><img src="/image/icon_add.svg"></i>개별등록</button>
+                        <button type="button" id="btn_batchstud"><i><img src="/image/icon_add.svg"></i>일괄등록</button>
+                        <button type="button" class="btn_gray" id="btn_excel"><i><img src="/image/ico_download.svg"></i>엑셀 다운로드</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="table">
+                        <table id="student-table">
+                            <thead>
+                            <tr>
+                                <th style="width: 90px;"><input type="checkbox" id="checksAll"></th>
+                                <th>학년</th>
+                                <th>학생아이디</th>
+                                <th>클래스</th>
+                                <th>테스트단계</th>
+                                <th>진행율</th>
+                                <th>상태</th>
+                                <th style="width: 90px;"></th>
+                            </tr>
+                            </thead>
+                            <tbody id="student-body">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <ul id="student-pagination">
+                        </ul>
+                        <span class="btn_sample" id="form-download">일괄등록 양식 다운로드</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="modal_new" class="modal_popup">
+    <div class="title">
+        <span>클래스 등록</span>
+        <div class="btn_close" id="modal_close_btn" style="cursor:pointer;"><img src="/image/btn_modal_close.svg"></div>
+    </div>
+    <div class="body">
+        <div class="box">
+            <div>
+                <span>테스트 학년</span>
+                <select id="class-grade" style="width: 198px; cursor:pointer;">
+                </select>
+            </div>
+            <div>
+                <span>클래스 이름</span>
+                <input type="text" class="w100" id="class-name" onkeyup="check(this)" onkeydown="check(this)">
+                <button type="button" class="input" id="duplicate">중복확인</button>
+            </div>
+        </div>
+    </div>
+    <div class="btngroup">
+        <button type="text" class="btn_cancel" id="modal_cancel_btn">취소</button>
+        <button type="text" id="submit_new">확인</button>
+    </div>
+</div>
+<div id="modal_delete" class="modal_popup">
+    <div class="title">
+        <span>클래스 삭제</span>
+        <div class="btn_close" id="modal_close_btn2" style="cursor:pointer;"><img src="/image/btn_modal_close.svg"></div>
+    </div>
+    <div class="body">
+        <p class="status_b">" 클래스를 삭제하면 관련 데이터가 전부 삭제됩니다. "</p>
+        <div class="box">
+            <div>
+                <span>비밀번호</span>
+                <input type="password" class="w100" id="pass">
+                <button type="button" class="input" id="pass_submit">확인</button>
+            </div>
+        </div>
+    </div>
+    <div class="btngroup">
+        <button type="text" class="btn_cancel" id="modal_cancel_btn2">취소</button>
+        <button type="text" id="submit_delete">확인</button>
+    </div>
+</div>
+<div id="modal_new_stud" class="modal_popup" style="width: 700px;">
+    <div class="title">
+        <span>학생 등록</span>
+        <div class="btn_close" id="modal_close_btn3" style="cursor:pointer;"><img src="/image/btn_modal_close.svg"></div>
+    </div>
+    <div class="body">
+        <h4>클래스 정보</h4>
+        <div class="box">
+            <div>
+                <span>테스트 학년</span>
+                <select id="stud-grade" style="width: 200px; cursor:pointer;">
+                </select>
+                <span class="ml20">클래스 이름</span>
+                <select id="stud-class" style="width: 200px; cursor:pointer;">
+                </select>
+            </div>
+        </div>
+        <h4 class="mt20">계정 정보</h4>
+        <div class="box">
+            <div class="inputbox">
+                <div id="each">
+                    <input type="radio" id="self" name="self" checked="checked">직접입력
+                    <input type="radio" id="auto" name="auto">자동
+                    <div class="input-group spinner" data-trigger="spinner">
+                        <input type="text" class="form-control text-center" id="id-count" value="" data-rule="quantity"  style="pointer-events: none; color: #ececec; background-color: #ececec">
+                        <div class="input-group-addon" id="spin" style="pointer-events: none">
+                            <a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-caret-down"></i></a>
+                            <a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-caret-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnbox">
+                    <button type="button" class="btn_gray" id="id-auto" style="pointer-events: none">아이디 자동생성</button>
+                    <div class="excel_upload" id="excel-upload" style="display: none; margin-top: 0; width: 355px;">
+                        <label for="file" id="file_label">
+                            <div class="btn_excel" id="excel">엑셀 파일 업로드</div>
+                        </label>
+                        <input type="file" name="file" id="file" accept=".xlsx" style="display: none"><p class="originName" id="originName">파일을 선택해주세요</p>
+                    </div>
+                    <button type="button" class="btn_purple" id="id-duplicate">아이디 중복확인</button>
+                    <button type="button" class="btn_purple" id="pass-auto">비밀번호 자동생성</button>
+                </div>
+            </div>
+        </div>
+        <div class="mt10 popup_btnbox"><button type="button" class="btn_gray" id="download_excel"><i><img src="/image/ico_download.svg"></i>엑셀 다운로드</button></div>
+        <div class="table_popup mt10">
+            <table class="scroll" id="register-table">
+                <thead>
+                <tr>
+                    <th style="width: 100px;">No.</th>
+                    <th>아이디</th>
+                    <th>비밀번호</th>
+                </tr>
+                </thead>
+                <tbody id="register-body" style="height: 305px; overflow-y: scroll;display: block;">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="btngroup">
+        <button type="text" class="btn_cancel" id="modal_close_btn4">취소</button>
+        <button type="text" id="register_submit">확인</button>
+    </div>
+</div>
+<div id="modal_delete_stud" class="modal_popup">
+    <div class="title">
+        <span>학생 삭제</span>
+        <div class="btn_close" id="modal_close_btns2" style="cursor:pointer;"><img src="/image/btn_modal_close.svg"></div>
+    </div>
+    <div class="body">
+        <p class="status_b">" 학생을 삭제하면 관련 데이터가 전부 삭제됩니다. "</p>
+        <div class="box">
+            <div>
+                <span>비밀번호</span>
+                <input type="password" class="w100" id="stud_pass">
+                <button type="button" class="input" id="stud_pass_submit">확인</button>
+            </div>
+        </div>
+        </div>
+    <div class="btngroup">
+        <button type="text" class="btn_cancel" id="modal_cancel_btns2">취소</button>
+        <button type="text" id="stud_submit_delete">확인</button>
+    </div>
+</div>
+
+<!--오류 Modal-->
+<div id="modal"  style="box-shadow: 5px 5px 5px 5px #80808080">
+    <div class="btn_close" id="error_close_btn"><img src="/image/btn_modal_close.svg"></div>
+    <div class="icon" id="icon">
+        <img id="error_img" src="/image/icon_error.svg">
+        <div class="loader" id="loader" style="display: none; padding-top: 50px">
+            <div class="loader-inner ball-spin-fade-loader">
+                <div style="background-color: var(--purple);"></div>
+                <div style="background-color: var(--purple);"></div>
+                <div style="background-color: var(--purple);"></div>
+                <div style="background-color: var(--purple);"></div>
+                <div style="background-color: var(--purple);"></div>
+                <div style="background-color: var(--purple);"></div>
+                <div style="background-color: var(--purple);"></div>
+                <div style="background-color: var(--purple);"></div>
+            </div>
+        </div>
+    </div>
+    <p id="error_title"></p>
+    <p id="error_content"></p>
+    <div class="btngroup">
+        <button type="text" id="error_ok_btn">확인</button>
+    </div>
+</div>
+<!--저장 Modal-->
+<div id="modal_save">
+    <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+    <div class="icon"><img src="/image/icon_download.svg"></div>
+    <p>사용 가이드 다운로드</p>
+    <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+    <div class="btngroup">
+        <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+        <button type="text" id="save">확인</button>
+    </div>
+</div>
+<div id="modal_bg"></div>
+<!-- 페이지 렌더링 관련 선언 -->
+<script th:src="@{/js/jquery-latest.js}"></script>
+<script th:src="@{/js/jquery.spinner.js}"></script>
+<script th:src="@{/js/resetPassword.js}"></script>
+<script th:src="@{/js/O_list.js}"></script>
+<script th:src="@{/js/list.js}"></script>
+<script th:src="@{/js/logout.js}"></script>
+<script th:src="@{/js/moveMypage.js}"></script>
+<script th:src="@{/js/insertOrgNm.js}"></script>
+<script th:src="@{/js/api-lib.js}"></script>
+<script th:src="@{/js/api.js}"></script>
+<script th:src="@{/js/excel_export.js}"></script>
+<script th:src="@{/js/save.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+
+    <!--그래프-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #graph_area {
+            width: 100%;
+            height: 100%;
+            border: 1px solid lightgray;
+        }
+    </style>
+    <title>EduSoDA - 학생 상세</title>
+</head>
+<body>
+<div class="container">
+    <div class="gnb">
+        <div class="left_wrap">
+            <a href="/aitutor/teacher/T_list" id="logo"><div class="logo"></div></a>
+            <a href="/aitutor/teacher/T_list" style="color:#ffffff;"><div class="sys_name">EduSoDA<span id = org-name></span></div></a>
+        </div>
+        <div class="center_wrap menu">
+            <a href="/aitutor/teacher/T_list"><span class="current"><img src="/image/gnb_icon_class.svg">클래스 관리</span></a>
+            <a href="/aitutor/teacher/classmain"><span><img src="/image/gnb_icon_status.svg">클래스 현황</span></a>
+        </div>
+        <div class="right_wrap">
+            <div class="user" id="user_open_btn">
+                <div class="user_modal" id="user_modal">
+                    <ul>
+                        <li><a href="/aitutor/teacher/T_mypage" style="color:#ffffff;">마이페이지</a></li>
+                        <li id="logout">로그아웃</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help" id="help"></div>
+        </div>
+    </div>
+    <div class="content tpage">
+        <div class="topcontentbox">
+            <div class="inner">
+                <div class="infogroup">
+                    <div class="title">
+                        <h2>기본정보</h2>
+                        <div class="btnbox">
+                            <button type="button" onclick="infoSave()"><i><img src="/image/icon_save.svg"></i>저장</button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th style="width: 15%;">학생아이디</th>
+                                <th style="width: 15%;">학년</th>
+                                <th style="width: 15%;">상태</th>
+                                <th style="width: 15%;">테스트 학년</th>
+                                <th style="width: 15%;">히스토리</th>
+                                <th >비밀번호</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td id="user_nm"></td>
+                                <td id="user_gbn"></td>
+                                <td>
+                                    <select id="user_state" style="display: none; cursor: pointer;" onchange="userState(this)">
+
+                                    </select>
+                                </td>
+                                <td>
+                                    <span id="user_test_level"></span>
+                                    <select disabled>
+                                        <option id="userTestGrd"></option>
+                                    </select>
+                                </td>
+                                <td><button type="button" class="btn_gray" disabled>히스토리</button></td>
+                                <td>
+                                    <input type="text" id = "reset_pass" value="" style="width: 150px;">
+                                    <button type="button" class="btn_gray" onclick="resetPassword()">리셋</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="contentbox">
+            <div class="inner">
+                <div>
+                    <div class="title">
+                        <div class="titlebox">
+                            <h3>테스트 정보</h3>
+                            <button type="button" class="btn_gray" id="view_table" disabled="disabled"><i><img src="/image/btn_pathtable.svg"></i>최종경로보기</button>
+                            <button type="button" class="btn_gray" id="view_graph" disabled="disabled"><i><img src="/image/btn_path.svg"></i>최종그래프보기</button>
+                        </div>
+<!--                        <div class="btnbox">-->
+                        <div class="btnbox">
+                            <select disabled>
+                                <option id="user_Test_Grd"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table" id="table_div3" style="display: none">
+                        <table>
+                            <tr>
+                                <td rowspan="2" class="lth last"><img src="/image/icon_test_gray.svg">3단계</td>
+                                <td class="th">점수</td>
+                                <td class="th">소요시간</td>
+                                <td class="th">상세</td>
+                            </tr>
+                            <tr>
+                                <td class="last" id="last_score3"></td>
+                                <td class="last" id="last_time3"></td>
+                                <td class="last" ><button type="button" class="btn_blue" id="result_btn3" style="display: none">답안지 보기</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table mt20" id="table_div2" style="display: none">
+                        <table>
+                            <tr>
+                                <td rowspan="2" class="lth last"><img src="/image/icon_test_gray.svg">2단계</td>
+                                <td class="th">점수</td>
+                                <td class="th">소요시간</td>
+                                <td class="th">상세</td>
+                            </tr>
+                            <tr>
+                                <td class="last" id="last_score2"></td>
+                                <td class="last" id="last_time2"></td>
+                                <td class="last"><button type="button" class="btn_blue" id="result_btn2" style="display: none">답안지 보기</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table mt20" id="table_div1" style="display: none">
+                        <table>
+                            <tr>
+                                <td rowspan="2" class="lth last"><img src="/image/icon_test_gray.svg">1단계</td>
+                                <td class="th">점수</td>
+                                <td class="th">소요시간</td>
+                                <td class="th">상세</td>
+                            </tr>
+                            <tr>
+                                <td class="last" id="last_score1"></td>
+                                <td class="last" id="last_time1"></td>
+                                <td class="last"><button type="button" class="btn_blue" id="result_btn1" style="display: none">답안지 보기</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="btnbox bottom"><button type="button" class="btn_darkgray"  onclick="history.go(-1);">이전으로</button></div>
+        </div>
+        <div id="T_graph">
+            <div class="answer_wrap line" id="answer">
+                <div class="title">
+                    <span class="total" id="ans-total"></span>
+                    <span class="ans_cnt" id="ans-cnt"></span>
+                    <span class="null_cnt" id="null-cnt"></span>
+                    <div style="cursor: pointer" ><img src="/image/btn_close_w.svg" id="answer_wrap_close"></div>
+                </div>
+                <div class="answer">
+                    <ul class="ans_title">
+                        <li>번호</li>
+                        <li>입력답변</li>
+                        <li>결과</li>
+                    </ul>
+                    <ul class="ans_list" id="ans-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="container answer_popup">
+                <div class="test_area" id="test_area" >
+                    <div class="title" style="cursor:default">
+                        <span class="num" id="test-num"></span>
+                        <span id="test-level"></span>
+                        <span id="test-title"></span>
+                    </div>
+                    <div class="q_box">
+                        <img id="test-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="graph">
+            <div class="loader">
+                <div class="loader-inner ball-spin-fade-loader" id="loadingBar">
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                </div>
+            </div>
+            <div class="graph_area" id="graph_area">
+
+            </div>
+        </div>
+        <div id="graph_table" style="overflow:scroll">
+            <div class="graph_area" id="table_area">
+                <table class="path" id="result_list_table">
+                    <thead><tr><th>수학 영역</th><th>학기</th><th>학습 경로</th><th>잘해요!</th></tr></thead>
+                    <tbody id="table_tbody"></tbody>
+                </table>
+
+            </div>
+        </div>
+        <div id="modal">
+            <div class="btn_close" id="modal_close_btn"><img src="/image/btn_modal_close.svg"></div>
+            <div class="icon"><img id = "icon_id"></div>
+            <p id="modal_title"></p>
+            <P id="modal_cotent"></P>
+            <div class="btngroup">
+                <button type="text" id="modal_ok_btn">확인</button>
+            </div>
+        </div>
+        <div id="modal_save">
+            <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+            <div class="icon"><img src="/image/icon_download.svg"></div>
+            <p>사용 가이드 다운로드</p>
+            <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+            <div class="btngroup">
+                <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+                <button type="text" id="save">확인</button>
+            </div>
+        </div>
+        <div id="modal_bg"></div>
+        <div id="modal_bg_down" style="display: none; padding-left: 43%; padding-top: 15%;">
+            <div class="loader">
+                <div class="loader-inner ball-spin-fade-loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Script-->
+<!--<script type="text/javascript" src="js/S_mypage.js"></script>-->
+<script th:src="@{/js/graphDraw.js}"></script>
+<script th:src="@{/js/T_sdetail.js}"></script>
+<script th:src="@{/js/resetPassword.js}"></script>
+<script th:src="@{/js/insertOrgNm.js}"></script>
+<script th:src="@{/js/moveMypage.js}"></script>
+<script th:src="@{/js/logout.js}"></script>
+<script th:src="@{/js/save.js}"></script>
+<script th:src="@{/js/api-lib.js}"></script>
+<script th:src="@{/js/api.js}"></script>
+
+</body>
+</html>

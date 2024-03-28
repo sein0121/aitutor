@@ -1,0 +1,89 @@
+{
+  "rsp_code" : 200,
+  "result": [
+    {
+      "user_qst_level" : 1,
+      "user_test_yn": "Y",
+      "test_time": "00:15:00",
+      "qst_id": [
+        {
+          "value": "Q0001",
+          "unit_nm": "반비례 관계와 그 그래프",
+          "submit_answer": "5",
+          "qst_answer": "5",
+          "qst_diff_rate": "중"
+        },
+        {
+          "value": "Q0002",
+          "unit_nm": "반비례 관계와 그 그래프",
+          "submit_answer": "3",
+          "qst_answer": "5",
+          "qst_diff_rate": "상"
+        },
+        {
+          "value": "Q0003",
+          "unit_nm": "일차방정식",
+          "submit_answer": "4",
+          "qst_answer": "1",
+          "qst_diff_rate": "중"
+        }
+      ]
+    },
+    {
+      "user_qst_level" : 2,
+      "user_test_yn": "Y",
+      "test_time": "00:30:00",
+      "qst_id": [
+        {
+          "value": "Q0001",
+          "unit_nm": "반비례 관계와 그 그래프",
+          "submit_answer": "5",
+          "qst_answer": "1",
+          "qst_diff_rate": "중"
+        },
+        {
+          "value": "Q0002",
+          "unit_nm": "반비례 관계와 그 그래프",
+          "submit_answer": "3",
+          "qst_answer": "2",
+          "qst_diff_rate": "상"
+        },
+        {
+          "value": "Q0003",
+          "unit_nm": "일차방정식",
+          "submit_answer": "4",
+          "qst_answer": "1",
+          "qst_diff_rate": "중"
+        }
+      ]
+    },
+    {
+      "user_qst_level" : 3,
+      "user_test_yn": "Y",
+      "test_time": "00:45:00",
+      "qst_id": [
+        {
+          "value": "W0001",
+          "unit_nm": "반비례 관계와 그 그래프",
+          "submit_answer": "5",
+          "qst_answer": "5",
+          "qst_diff_rate": "중"
+        },
+        {
+          "value": "W0002",
+          "unit_nm": "반비례 관계와 그 그래프",
+          "submit_answer": "3",
+          "qst_answer": "5",
+          "qst_diff_rate": "상"
+        },
+        {
+          "value": "W003",
+          "unit_nm": "일차방정식",
+          "submit_answer": "4",
+          "qst_answer": "1",
+          "qst_diff_rate": "중"
+        }
+      ]
+    }
+  ]
+}

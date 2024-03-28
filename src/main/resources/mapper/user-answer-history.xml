@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.agilesoda.aitutor.repository.mapper.UserAnswerHistoryRepository">
+
+    <insert id="createAnswerHistory" parameterType="com.agilesoda.aitutor.dto.student.HistoryAnswerRequestDto">
+        insert into user_answer_history (uqh_id, qst_answer, create_date)
+        values ( (select id
+                  from user_qst_history
+                  where org_id = #{orgId}
+                    and user_id = #{userId}
+                    and user_grd = #{userGrd}
+                    and user_test_grd = #{userTestGrd}
+                    and user_test_level = #{userTestLevel}
+                  order by id desc
+                  limit 1)
+               , #{qstAnswer}, #{createDate})
+    </insert>
+
+
+</mapper>

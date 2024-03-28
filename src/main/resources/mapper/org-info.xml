@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.agilesoda.aitutor.repository.mapper.OrgInfoRepository">
+
+    <select id="selectAll" resultType="com.agilesoda.aitutor.dto.user.OrgListResponseDto">
+        select org_id, org_nm
+        from org_info
+        order by org_id
+    </select>
+
+    <select id="selectNotNullList" resultType="com.agilesoda.aitutor.dto.user.OrgListResponseDto">
+        select org_id, org_nm
+        from org_info
+        where org_nm is not null
+        order by org_id
+    </select>
+
+    <select id="selectOrgNm" parameterType="String" resultType="String">
+        select org_nm
+        from org_info
+        where org_id = #{org_id}
+        limit 1
+    </select>
+
+    <update id="updateOrgName" parameterType="String">
+        update org_info
+        set org_nm = #{org_nm}
+        where org_id = #{org_id}
+    </update>
+
+</mapper>

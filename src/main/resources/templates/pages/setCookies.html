@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background: #1F2556;">
+    <span th:text="${org_id}" id="org_id" style="display: none"></span>
+    <span th:text="${org_nm}"id="org_nm" style="display: none"></span>
+    <span th:text="${user_id}" id="user_id" style="display: none"></span>
+    <span th:text="${user_nm}" id="user_nm" style="display: none"></span>
+<!--    <span id="user_nm" style="display: none"></span>-->
+    <span th:text="${user_type}" id="user_type" style="display: none"></span>
+    <span th:text="${user_grade}" id="user_grade" style="display: none"></span>
+    <span th:text="${user_test_grade}" id="user_test_grade" style="display: none"></span>
+    <span th:text="${user_test_level}" id="user_test_level" style="display: none"></span>
+    <span th:text="${user_pause_yn}" id="user_pause_yn" style="display: none"></span>
+    <span th:text="${user_test_yn}" id="user_test_yn" style="display: none"></span>
+<!--    <span th:text="${user_test_level}" id="user_test_level" >01</span>-->
+<!--    <span th:text="${user_test_yn}" id="user_test_yn">n</span>-->
+<!--    <span th:text="${user_pause_yn}" id="user_pause_yn">n</span>-->
+</body>
+    <script type="text/javascript">
+        //viewController 에서 보내준 값을 타임리프로 받아온 태그를 찾아서 변수에 넣어줌.
+        let orgId = document.getElementById("org_id").innerText; //조직ID
+        let orgNm = document.getElementById("org_nm").innerText; //조직명
+        let userId = document.getElementById("user_id").innerText; //사용자ID
+        let userNm = document.getElementById("user_nm").innerText; //사용자명
+        let userType = document.getElementById("user_type").innerText; //사용자 형태
+        let userGrd = document.getElementById("user_grade").innerText; // 학년(현재)
+        let userTestGrd = document.getElementById("user_test_grade").innerText; //테스트 학년(현재)
+        let userTestLevel = document.getElementById("user_test_level").innerText; // 테스트 단계
+        let userTestYn = document.getElementById("user_test_yn").innerText; // 테스트 완료 여부
+        let userPauseYn = document.getElementById("user_pause_yn").innerText; //  테스트 중단 여부
+
+        // 받아온 데이터 쿠키에 넣기
+        function setCookie(cookie_name, value) {
+            var cookie_value = escape(value);
+            document.cookie = cookie_name + '=' + cookie_value;
+        }
+
+        // function setCookie(cookie_name, value, days) {
+        //     var exdate = new Date();
+        //     exdate.setDate(exdate.getDate() + days);
+        //     // exdate.setMinutes(exdate.getMinutes() + miuntes); //만료값 분으로 지정
+        //     // 설정 일수만큼 현재시간에 만료값으로 지정
+        //
+        //     var cookie_value = escape(value) + ((days == null) ? '' : '; expires=' + exdate.toUTCString());
+        //     document.cookie = cookie_name + '=' + cookie_value;
+        // }
+
+        //setCookie 호출
+        setCookie('orgId', orgId);
+        setCookie('orgNm', orgNm);
+        setCookie('userId', userId);
+        setCookie('userType', userType);
+
+        //타입 형태에 따라 페이지 이동
+        if(userType==="00") window.location.href = 'aitutor/agilesoda/admin';
+        else if(userType==="10") window.location.href = 'aitutor/admin/O_list';
+        else if(userType==="20") {
+            setCookie('userNm', userNm);
+
+            if(userNm == "") window.location.href = 'aitutor/teacher/T_mypage';
+            else window.location.href = 'aitutor/teacher/T_list';
+        }
+        else if(userType==="30"){
+            setCookie('userGrd', userGrd);
+            setCookie('userTestGrd', userTestGrd);
+            setCookie('userTestLevel', userTestLevel);
+            setCookie('userTestYn', userTestYn);
+            setCookie('userPauseYn', userPauseYn);
+
+            window.location.href = 'aitutor/student/intro';
+
+            // if(userTestLevel=="01" && userTestYn == "n") {
+            //     if (userPauseYn == "n") window.location.href = 'aitutor/student/intro';
+            //     else if (userPauseYn == "y") window.location.href = 'aitutor/student/main';
+            //     else window.location.href = 'aitutor/student/S_result';
+            // }else window.location.href = 'aitutor/student/S_result';
+        }
+
+    </script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+    <title>EduSoDA - Intro</title>
+</head>
+<body>
+	<div class="container">
+        <div class="gnb">
+            <div class="left_wrap">
+                <a href=""><div class="logo"></div></a>
+                <a href="" style="color:#ffffff;"><div class="sys_name">EduSoDA<span id="org_nm"></span></div></a>
+            </div>
+            <div class="right_wrap">
+                <div class="user" id="user_open_btn">
+                    <div class="user_modal" id="user_modal">
+                        <ul>
+                            <li onclick="moveMypage()">마이페이지</li>
+                            <li id="logout">로그아웃</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help" id="help"></div>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="intro_box">
+                <div class="box">
+                    <div class="inner" id="slide_box">
+                        <div>
+                            <p>짝짝짝!! 환영합니다!!</p>
+                            <span><img src="/image/img_intro_01.png"></span>
+                            <span>애자일소다의 AI Tutor는<br>AI를 기반으로 학생의 취약 단원을 진단하여<br>최적의 학습 경로를 제안하는<br>학습 관리 서비스랍니다.</span>
+                            <button type="button" class="btn_gray" id="step01">다음</button>
+                        </div>
+                        <div>
+                            <p>테스트는 총 3단계입니다!!</p>
+                            <span><img src="/image/img_intro_02.png"></span>
+                            <span>테스트 문항은 개인별로<br>다르게 제공될 수 있습니다.<br> 이전 단계의 결과에 따라,<br>2, 3차 테스트는 생략될 수 있습니다.</span>
+                            <button type="button" class="btn_gray" id="step02">다음</button>
+                        </div>
+                        <div>
+                            <p>꼭 기억해주세요!!</p>
+                            <span><img src="/image/img_intro_03.png"></span>
+                            <span>한 번 제출한 답안은 수정되지 않으니,<br>신중하게 테스트에 임해 주세요.<br>모든 테스트를 한 번에 실시할 때,<br>가장 정확한 학습 진단 결과를 얻을 수 있습니다.</span>
+                            <button type="button" class="btn_purple" id="step03">들어가기</button>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="btn">
+                    <button type="button" id="step01_btn" class="active"></button>
+                    <button type="button" id="step02_btn"></button>
+                    <button type="button" id="step03_btn"></button>
+                </div>
+            </div>            
+            <div class="video_frame">
+                <video src="/image/video/1088557367-hd.mov" autoplay muted loop></video>
+            </div>
+        </div>
+        <div id="modal_save">
+            <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+            <div class="icon"><img src="/image/icon_download.svg"></div>
+            <p>사용 가이드 다운로드</p>
+            <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+            <div class="btngroup">
+                <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+                <button type="text" id="save">확인</button>
+            </div>
+        </div>
+        <div id="modal_bg"></div>
+    </div>
+    <!-- script -->
+    <script th:src="@{/js/intro.js}"></script>
+    <script th:src="@{/js/save.js}"></script>
+    <script th:src="@{/js/moveMypage.js}"></script>
+    <script th:src="@{/js/logout.js}"></script>
+    <script th:src="@{/js/api-lib.js}"></script>
+    <script th:src="@{/js/api.js}"></script>
+    <script th:src="@{/js/jquery-latest.js}"></script>
+
+
+</body>
+</html>

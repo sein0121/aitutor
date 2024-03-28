@@ -1,0 +1,228 @@
+{
+  "rsp_code": 200,
+  "result": {
+    "final_path_yn": "Y",
+    "path_nm": {
+      "수와 연산": {
+        "fail": {
+          "초등 5-1": [
+            "분수와 소수의 크기 비교",
+            "공약수와 최대공약수",
+            "크기가 같은 분수",
+            "약수",
+            "통분",
+            "공배수와 최소공배수",
+            "배수"
+          ]
+        },
+        "pass": {}
+      },
+      "규칙성": {
+        "fail": {
+          "초등 5-1": [
+            "두 양 사이의 관계",
+            "대응 관계를 식으로 나타내기"
+          ]
+        },
+        "pass": {}
+      },
+      "측정": {
+        "fail": {
+          "초등 5-1": [
+            "직사각형의 넓이",
+            "사다리꼴의 넓이",
+            "사각형의 둘레",
+            "넓이의 단위",
+            "평행사변형과 삼각형의 넓이",
+            "정다각형의 둘레"
+          ]
+        },
+        "pass": {}
+      }
+    },
+    "user_test_list": [
+      {
+        "user_test_level": "01",
+        "user_test_yn": "Y",
+        "test_time": "3000",
+        "qst_list": [
+          {
+            "qst_id": "JH00185",
+            "unit_nm": "공약수와 최대공약수",
+            "submit_answer": "1234",
+            "qst_answer": "28",
+            "qst_img_file_nm": "../../image/test/q01.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH00187",
+            "unit_nm": "공약수와 최대공약수",
+            "submit_answer": "1234",
+            "qst_answer": "6",
+            "qst_img_file_nm": "/JH00187.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH00361",
+            "unit_nm": "분수와 소수의 크기 비교",
+            "submit_answer": "1234",
+            "qst_answer": "3",
+            "qst_img_file_nm": "/JH00361.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH00373",
+            "unit_nm": "분수와 소수의 크기 비교",
+            "submit_answer": "1234",
+            "qst_answer": "13",
+            "qst_img_file_nm": "/JH00373.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH01620",
+            "unit_nm": "두 양 사이의 관계",
+            "submit_answer": "1234",
+            "qst_answer": "10",
+            "qst_img_file_nm": "/JH01620.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH01635",
+            "unit_nm": "두 양 사이의 관계",
+            "submit_answer": "1234",
+            "qst_answer": "2000",
+            "qst_img_file_nm": "/JH01635.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH01658",
+            "unit_nm": "대응 관계를 식으로 나타내기",
+            "submit_answer": "1234",
+            "qst_answer": "25",
+            "qst_img_file_nm": "/JH01658.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH01659",
+            "unit_nm": "대응 관계를 식으로 나타내기",
+            "submit_answer": "1234",
+            "qst_answer": "15",
+            "qst_img_file_nm": "/JH01659.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02544",
+            "unit_nm": "사각형의 둘레",
+            "submit_answer": "1234",
+            "qst_answer": "32",
+            "qst_img_file_nm": "/JH02544.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02550",
+            "unit_nm": "사각형의 둘레",
+            "submit_answer": "1234",
+            "qst_answer": "ㄱ",
+            "qst_img_file_nm": "/JH02550.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02605",
+            "unit_nm": "직사각형의 넓이",
+            "submit_answer": "1234",
+            "qst_answer": "893",
+            "qst_img_file_nm": "/JH02605.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02607",
+            "unit_nm": "직사각형의 넓이",
+            "submit_answer": "1234",
+            "qst_answer": "63",
+            "qst_img_file_nm": "/JH02607.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02671",
+            "unit_nm": "사다리꼴의 넓이",
+            "submit_answer": "1234",
+            "qst_answer": "752",
+            "qst_img_file_nm": "/JH02671.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02676",
+            "unit_nm": "사다리꼴의 넓이",
+            "submit_answer": "1234",
+            "qst_answer": "14",
+            "qst_img_file_nm": "/JH02676.jpg",
+            "edu_level_nm": "E51"
+          }
+        ]
+      },
+      {
+        "user_test_level": "02",
+        "user_test_yn": "Y",
+        "test_time": "3000",
+        "qst_list": [
+          {
+            "qst_id": "JH00144",
+            "unit_nm": "약수",
+            "submit_answer": "1234",
+            "qst_answer": "ㄴ",
+            "qst_img_file_nm": "/JH00144.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH00242",
+            "unit_nm": "공배수와 최소공배수",
+            "submit_answer": "1234",
+            "qst_answer": "20",
+            "qst_img_file_nm": "/JH00242.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH00288",
+            "unit_nm": "크기가 같은 분수",
+            "submit_answer": "1234",
+            "qst_answer": "36",
+            "qst_img_file_nm": "/JH00288.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH00331",
+            "unit_nm": "통분",
+            "submit_answer": "1234",
+            "qst_answer": "2",
+            "qst_img_file_nm": "/JH00331.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02530",
+            "unit_nm": "정다각형의 둘레",
+            "submit_answer": "1234",
+            "qst_answer": "40",
+            "qst_img_file_nm": "/JH02530.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02571",
+            "unit_nm": "넓이의 단위",
+            "submit_answer": "1234",
+            "qst_answer": "70315",
+            "qst_img_file_nm": "/JH02571.jpg",
+            "edu_level_nm": "E51"
+          },
+          {
+            "qst_id": "JH02643",
+            "unit_nm": "평행사변형과 삼각형의 넓이",
+            "submit_answer": "1234",
+            "qst_answer": "18",
+            "qst_img_file_nm": "/JH02643.jpg",
+            "edu_level_nm": "E51"
+          }
+        ]
+      }
+    ]
+  }
+}

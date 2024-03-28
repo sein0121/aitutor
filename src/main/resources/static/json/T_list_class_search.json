@@ -1,0 +1,107 @@
+{
+  "code": 200,
+  "result": {
+      "search_list": [
+        {
+          "class_id": "C0010",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스1",
+          "class_count": 40,
+          "class_type": "클래스1",
+          "test_rate": 50,
+          "created_date": "20220326"
+        },
+        {
+          "class_id": "C0030",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스11",
+          "class_count": 40,
+          "class_type": "클래스11",
+          "test_rate": 50,
+          "created_date": "20220614"
+        },
+        {
+          "class_id": "C0040",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20221019"
+        },
+        {
+          "class_id": "C0050",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스111",
+          "class_count": 40,
+          "class_type": "클래스111",
+          "test_rate": 50,
+          "created_date": "20220118"
+        },
+        {
+          "class_id": "C0060",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스2",
+          "class_count": 40,
+          "class_type": "클래스2",
+          "test_rate": 50,
+          "created_date": "20220701"
+        },
+        {
+          "class_id": "C0070",
+          "class_gbn": "초6-2",
+          "class_nm": "클래스22",
+          "class_count": 40,
+          "class_type": "클래스22",
+          "test_rate": 50,
+          "created_date": "20220918"
+        },
+        {
+          "class_id": "C0080",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스222",
+          "class_count": 40,
+          "class_type": "클래스222",
+          "test_rate": 50,
+          "created_date": "20220819"
+
+        },
+        {
+          "class_id": "C0090",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스3",
+          "class_count": 40,
+          "class_type": "클래스3",
+          "test_rate": 50,
+          "created_date": "20220303"
+        },
+        {
+          "class_id": "C0100",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스33",
+          "class_count": 40,
+          "class_type": "클래스33",
+          "test_rate": 50,
+          "created_date": "20220218"
+        },
+        {
+          "class_id": "C0110",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스333",
+          "class_count": 40,
+          "class_type": "클래스333",
+          "test_rate": 50,
+          "created_date": "20221213"
+        },
+        {
+          "class_id": "C0120",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스4",
+          "class_count": 40,
+          "class_type": "클래스4",
+          "test_rate": 50,
+          "created_date": "20220303"
+        }
+      ]
+    }
+}

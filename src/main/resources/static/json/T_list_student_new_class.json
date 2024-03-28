@@ -1,0 +1,35 @@
+{
+  "code": 200,
+  "result": {
+      "class_list": [
+        {
+          "class_gbn": "초1-2",
+          "class_nm": "클래스1"
+        },
+        {
+          "class_gbn": "초4-2",
+          "class_nm": "클래스4"
+        },
+        {
+          "class_gbn": "초1-1",
+          "class_nm": "쫌하네여"
+        },
+        {
+          "class_gbn": "초1-2",
+          "class_nm": "옥수최강"
+        },
+        {
+          "class_gbn": "초1-1",
+          "class_nm": "수학귀신"
+        },
+        {
+          "class_gbn": "초1-1",
+          "class_nm": "병아리반"
+        },
+        {
+          "class_gbn": "초4-1",
+          "class_nm": "수학천재"
+        }
+      ]
+    }
+}

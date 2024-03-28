@@ -1,0 +1,15 @@
+<svg id="icon_class" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="14" viewBox="0 0 24 14">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_91" data-name="사각형 91" width="24" height="14" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_84" data-name="그룹 84" clip-path="url(#clip-path)">
+    <path id="패스_1906" data-name="패스 1906" d="M54,64a6,6,0,0,0-6,6H60a6,6,0,0,0-6-6" transform="translate(-42 -56)" fill="#fff"/>
+    <path id="패스_1907" data-name="패스 1907" d="M132.6,22a3,3,0,1,0-3-3,3,3,0,0,0,3,3" transform="translate(-113.4 -14)" fill="#fff"/>
+    <path id="패스_1908" data-name="패스 1908" d="M138.021,68.267a4.777,4.777,0,0,0-2.226.548,6.977,6.977,0,0,1,2.026,4.919h4.953a4.8,4.8,0,0,0-4.753-5.467" transform="translate(-118.821 -59.734)" fill="#fff"/>
+    <path id="패스_1909" data-name="패스 1909" d="M4.8,68.267A4.8,4.8,0,0,0,.047,73.734H5a6.977,6.977,0,0,1,2.026-4.919A4.777,4.777,0,0,0,4.8,68.267" transform="translate(0 -59.734)" fill="#fff"/>
+    <path id="패스_1910" data-name="패스 1910" d="M68,3.5A3.5,3.5,0,1,0,71.5,0,3.5,3.5,0,0,0,68,3.5" transform="translate(-59.5)" fill="#fff"/>
+    <path id="패스_1911" data-name="패스 1911" d="M17.4,16a3,3,0,1,0,3,3,3,3,0,0,0-3-3" transform="translate(-12.6 -14)" fill="#fff"/>
+  </g>
+</svg>

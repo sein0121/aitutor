@@ -1,0 +1,21 @@
+{
+  "rsp_code": 200,
+  "result": [
+    {
+      "student_id": "test1",
+      "used_yn": "n"
+    },
+    {
+      "student_id": "test2",
+      "used_yn": "n"
+    },
+    {
+      "student_id": "1111",
+      "used_yn": "n"
+    },
+    {
+      "student_id": "2222",
+      "used_yn": "n"
+    }
+  ]
+}

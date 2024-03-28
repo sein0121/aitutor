@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>EduSoDA - 테스트</title>
+</head>
+<body>
+<div id="main" class="container">
+    <div class="gnb">
+        <div class="left_wrap">
+            <a id="logoURL" href="/aitutor/student/main"><div class="logo" id="logo"></div></a>
+            <a id="nameURL" href="/aitutor/student/main"><div class="sys_name" id="name">EduSoDA</div></a>
+        </div>
+        <!-- 경과 시간 -->
+        <div class="center_wrap time" id="spend-time">
+            <!-- 경과 시간 표시 -->
+        </div>
+        <div class="right_wrap">
+            <div class="user" id="user_open_btn">
+                <div class="user_modal" id="user_modal">
+                    <ul>
+                        <li><a href="/aitutor/student/S_mypage"  style="color: #ffffff">마이페이지</a></li>
+                        <li id="logout">로그아웃</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="help" id="help"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="test_wrap">
+            <div class="top_area">
+                <div class="time">
+                    <div class="progressbar">
+                        <!--                        <input type="range" id="my-slider" min="0" max="100" value="50" oninput="slider()">-->
+                        <input type="range" id="my-slider" min="0" max="100">
+                        <span class="status"  style="pointer-events: none;"><span id="slider-value">0</span>%</span>
+                    </div>
+                    <div class="btn-view" id="view_answer">답안지 보기</div>
+                </div>
+                <div class="info">
+                    <span class="infobtn" id="modal_open_btn"><img src="/image/icon_alarm.svg"></span>
+                    <div class="info_modal" id="info_modal">
+                        <button class="info_close" id="modal_close_btn" style="cursor:pointer"></button>
+                        <ul>
+                            <li><i></i>총 예상 소요 시간은 60분입니다.</li>
+                            <li><i></i><div>
+                                주관식 문제의 경우, '공백', '쉼표', '단위'를 표기하지 마세요. <br>
+                                ex) 답: 2cm → 입력: 2(O)   2cm(X)   2 cm(X) <br>
+                                ex) 답: 2000 →입력: 2000(O)   2,000(X) <br>
+                            </div></li>
+                            <li><i></i><div>
+                                정답이 한글일 경우, 한글 자음만 입력해주세요. <br>
+                                ex) 답: ㉠ → 입력: ㄱ(O)   ㉠(X)   (ㄱ)(X)
+                            </div></li>
+                        </ul>
+                        <div class="textbox">답변 등록 이상이 있을 시, 선생님께 말씀해주세요.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test_area">
+                <div class="title">
+                    <span id="test-num"></span>
+                    <span class="testlevel-es" id="test-level"></span>
+                    <span id="test-title"></span>
+                </div>
+<!--                <textarea id="content"></textarea>-->
+<!--                <div id="render"></div>-->
+                <div class="q_box">
+                    <!-- <img src="image/test/q01.jpg"> -->
+                    <!-- style 라엘과 협의 -->
+                    <img id="test-img">
+                </div>
+                <div class="a_box">
+                    <span>현재 입력한 답</span>
+                    <div class="input">
+                        <!-- style 라엘과 협의 -->
+                        <input type="text" id="input-ans" style="text-align:center">
+                        <button type="button" id="ans-button">답변 저장</button>
+                    </div>
+                    <div class="btn">
+                        <button type="button" id="prev-button"><i class="prev">이전</i></button>
+                        <button type="button" id="next-button"><i class="next">다음</i></button>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <ul id="pagination">
+                    </ul>
+                </div>
+            </div>
+            <div class="btn_area">
+                <button type="button" id="test-submit">답안지 제출하기</button>
+                <button type="button" id="test-stop" class="stop">테스트 중지하기</button>
+            </div>
+        </div>
+        <div class="answer_wrap" id="answer">
+            <div class="title">
+                <span class="total" id="ans-total"></span>
+                <span class="ans_cnt" id="ans-cnt"></span>
+                <span class="null_cnt" id="null-cnt"></span>
+            </div>
+            <div class="answer">
+                <ul class="ans_title">
+                    <li>번호</li>
+                    <li>답변</li>
+                </ul>
+                <ul class="ans_list" id="ans-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal">
+    <div class="btn_close" id="popup_close_btn"><img src="/image/btn_modal_close.svg"></div>
+    <div class="icon"><img src="/image/icon_info.svg" id="img_icon"></div>
+    <p id="modal_title"></p>
+    <p id="modal_content"></p>
+    <div class="btngroup">
+        <!-- 제출 불가 -->
+        <button type="text" id="reject_ok_btn" style="display: none">확인</button>
+        <!-- 제출 완료 -->
+        <button type="text" id="popup_ok_btn" style="display: none">확인</button>
+        <!-- 테스트 중지 -->
+        <button type="text" id="stop_ok_btn" style="display: none">확인</button>
+        <button type="text" class="btn_cancel" id="modal_cancel_btn" style="display: none">취소</button>
+        <button type="text" id="submit" style="display: none">확인</button>
+    </div>
+</div>
+
+<div id="modal_save">
+    <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+    <div class="icon"><img src="/image/icon_download.svg"></div>
+    <p>사용 가이드 다운로드</p>
+    <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+    <div class="btngroup">
+        <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+        <button type="text" id="save">확인</button>
+    </div>
+</div>
+<div id="modal_bg"></div>
+
+<div id="loading" class="container">
+    <div class="gnb">
+        <div class="left_wrap">
+            <a id="loadingLogo" href="/aitutor/student/main"><div class="logo" id="loging"></div></a>
+            <a id="loadingName" href="/aitutor/student/main"><div class="sys_name" id="naming">EduSoDA<span id="org-name-load"></span></div></a>
+        </div>
+        <!-- 경과 시간 -->
+        <div class="center_wrap time">
+            <!-- 경과 시간 표시 -->
+            00:00:00
+        </div>
+        <div class="right_wrap">
+            <div class="user" style="pointer-events: none;"></div>
+            <div class="help" style="pointer-events: none;"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="test_wrap">
+            <div class="top_area">
+                <div class="time">
+                    <div class="progressbar">
+                        <!--                        <input type="range" id="my-slider" min="0" max="100" value="50" oninput="slider()">-->
+                        <input type="range" min="0" max="100" value="0" style="pointer-events: none;">
+                        <span class="status"  style="pointer-events: none;"><span style="font-size: 24px; padding-right: 6px;">0</span>%</span>
+                    </div>
+                    <div class="btn-view" style="pointer-events: none;">답안지 보기</div>
+                </div>
+                <div class="info">
+                    <span class="infobtn"  style="pointer-events: none;"><img src="/image/icon_alarm.svg"></span>
+                    <div class="info_modal">
+                        <button class="info_close"> </button>
+                        <ul>
+                            <li><i></i>총 예상 소요 시간은 60분입니다.</li>
+                            <li><i></i><div>주관식 문제의 경우, '단위'를 표기하지 마세요. <br> ex) 답: 2cm → 입력: 2(O) 2cm(X) 2 cm(X)</div></li>
+                            <li><i></i><div>정답이 한글일 경우, 한글 자음만 입력해주세요. <br>ex) 답: ㉠ → 입력: ㄱ(O) ㉠(X) (ㄱ)(X)</div></li>
+                        </ul>
+                        <div class="textbox">답변 등록 이상이 있을 시, 선생님께 말씀해주세요.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="test_area">
+                <div class="title">
+                    <span id="test-num"></span>
+                    <span class="testlevel-es" style="width: 71px"></span>
+                    <span>로딩중 ...</span>
+                </div>
+                <div class="q_box" style="padding: 170px 430px;">
+<!--                    <img src="/image/loading.gif" style="width: 125px">-->
+                    <div class="loader">
+                        <div class="loader-inner ball-spin-fade-loader">
+                            <div style="background-color: var(--purple);"></div>
+                            <div style="background-color: var(--purple);"></div>
+                            <div style="background-color: var(--purple);"></div>
+                            <div style="background-color: var(--purple);"></div>
+                            <div style="background-color: var(--purple);"></div>
+                            <div style="background-color: var(--purple);"></div>
+                            <div style="background-color: var(--purple);"></div>
+                            <div style="background-color: var(--purple);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 페이지 렌더링 관련 선언 -->
+<script th:src="@{/js/logout.js}"></script>
+<script th:src="@{/js/S_test.js}"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML}"></script>
+<script th:src="@{/js/api-lib.js}"></script>
+<script th:src="@{/js/api.js}"></script>
+<script th:src="@{/js/save.js}"></script>
+</body>
+</html>

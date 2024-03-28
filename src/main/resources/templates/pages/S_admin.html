@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>EduSoDA[관리자] - 마이 페이지</title>
+</head>
+<body>
+    <div class="container">
+        <div class="gnb">
+            <div class="left_wrap">
+                <a href="/aitutor/admin/O_list" id="logo"><div class="logo"></div></a>
+                <a href="/aitutor/admin/O_list" style="color:#ffffff;"><div class="sys_name">EduSoDA<span id = org-name></span></div></a>
+            </div>
+            <div class="right_wrap">
+                <div class="user" id="user_open_btn">
+                    <div class="user_modal" id="user_modal">
+                        <ul>
+                            <li onclick="moveMypage()">마이페이지</li>
+                            <li id="logout">로그아웃</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help" id="help"></div>
+            </div>            
+        </div>
+        <div class="content mypage">
+            <div class="Tmypage_wrap">
+                <h1><span id="org_info"></span> 관리자 페이지</h1>
+                <div class="content_box">
+                    <div class="content_title">
+                        <span class="title"><span id="open_password"><img src="/image/icon_select_arrow_down.svg"></span>비밀번호</span>
+                        <span class="btn-gray" id="btn_save">저장</span>
+                    </div>
+
+					<div class="content_body admin" id="password" style="display: none;">
+                        <div class="center_box password_box">
+                            <div>
+                                <span>현재 비밀번호</span>
+                                <input type="password" value="" id="pre_password">
+                            </div>
+                            <div>
+                                <span>신규 비밀번호</span>
+                                <input type="password" value="" id="new_password">
+                            </div>
+                            <div>
+                                <span>신규 비밀번호 확인</span>
+                                <input type="password" value="" id="new_password_ck">
+                            </div>
+                        </div>         
+                    </div>
+               </div>  
+               <div class="content_box">
+                    <div class="content_title">
+                        <span class="title">사용자 계정</span>
+                        <span class="btn" id="pass-save">저장</span>
+                    </div>
+                    <div class="content_body">
+						<div class="table">
+							<table id="table">
+								<thead>
+									<tr>
+										<th style="width: 20%;">사용자 ID</th>
+										<th style="width: 50%;">비밀번호</th>
+										<th style="width: 30%;">사용자 이름</th>
+									</tr>
+								</thead>
+								<tbody id="table_tbody">
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" id="input" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+<!--									<tr>-->
+<!--										<td>T1</td>-->
+<!--										<td><input type="text" style="width: 150px;"><button type="button" class="btn_gray">초기비밀번호로 리셋</button></td>-->
+<!--										<td>최고수학</td>-->
+<!--									</tr>-->
+								</tbody>
+							</table>
+						</div> 
+						<div class="pagination">
+	                        <ul id="pagination">
+<!--	                           <li id="prev_id" style="display: none"><a href=""><span class="prev">이전</span></a></li>-->
+<!--	                           <li class="current"><a href="">1</a></li>-->
+<!--                                <span id="page_1" onclik="paging(this.id)">"+i+"</span>-->
+<!--	                            <li><a href="">2</a></li>-->
+<!--	                           <li><a href="">3</a></li>-->
+<!--	                           <li><a href="">4</a></li>-->
+<!--	                            <li><a href="">5</a></li>-->
+<!--	                           <li><a href="">6</a></li>-->
+<!--	                           <li><a href="">7</a></li>-->
+<!--	                            <li><a href="">8</a></li>-->
+<!--	                           <li><a href="">9</a></li>-->
+<!--	                            <li id="next_id"><a href=""><span class="next">다음</span></a></li>-->
+	                        </ul>
+	                	</div>                             
+                    </div>
+               </div>  
+            </div>  
+        </div>
+    </div>
+    <div id="modal">
+        <div class="btn_close" id="modal_close_btn"><img src="/image/btn_modal_close.svg"></div>
+        <div class="icon"><img id = "icon_id"></div>
+        <p id="modal_title"></p>
+        <P id="modal_cotent"></P>
+        <div class="btngroup">
+            <button type="text" id="modal_ok_btn">확인</button>
+        </div>
+    </div>
+    <div id="modal_save">
+        <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+        <div class="icon"><img src="/image/icon_download.svg"></div>
+        <p>사용 가이드 다운로드</p>
+        <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+        <div class="btngroup">
+            <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+            <button type="text" id="save">확인</button>
+        </div>
+    </div>
+    <div id="modal_bg"></div>
+
+    <!-- script -->
+    <script th:src="@{/js/S_admin.js}"></script>
+	<script th:src="@{/js/moveMypage.js}"></script>
+	<script th:src="@{/js/moveLogo.js}"></script>
+	<script th:src="@{/js/insertOrgNm.js}"></script>
+	<script th:src="@{/js/logout.js}"></script>
+	<script th:src="@{/js/save.js}"></script>
+	<script th:src="@{/js/resetPassword.js}"></script>
+	<script th:src="@{/js/api-lib.js}"></script>
+	<script th:src="@{/js/api.js}"></script>
+    
+</body>
+</html>

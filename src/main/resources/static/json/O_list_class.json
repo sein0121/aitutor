@@ -1,0 +1,227 @@
+{
+  "code": 200,
+  "result": {
+      "class_list": [
+        {
+          "class_id": "클래스1",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "user_nm": "수학선생",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220616"
+        },
+        {
+          "class_id": "클래스2",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "user_nm": "춘식이",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220524"
+        },
+        {
+          "class_id": "클래스3",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "user_nm": "게토레이",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220721"
+        },
+        {
+          "class_id": "클래스4",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "user_nm": "수학선생",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220615"
+        },
+        {
+          "class_id": "클래스5",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "user_nm": "이디야",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220405"
+        },
+        {
+          "class_id": "클래스6",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "user_nm": "춘식이",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220409"
+        },
+        {
+          "class_id": "클래스7",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "user_nm": "게토레이",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220414"
+        },
+        {
+          "class_id": "클래스8",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "user_nm": "이디야",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220220"
+        },
+        {
+          "class_id": "클래스9",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "user_nm": "수학선생",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220125"
+        },
+        {
+          "class_id": "클래스10",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "user_nm": "게토레이",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220326"
+        },
+        {
+          "class_id": "클래스11",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스11",
+          "user_nm": "춘식이",
+          "class_count": 20,
+          "class_type": "클래스11",
+          "test_rate": 25,
+          "created_date": "20220520"
+        },
+        {
+          "class_id": "클래스12",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스12",
+          "user_nm": "게토레이",
+          "class_count": 50,
+          "class_type": "클래스12",
+          "test_rate": 72,
+          "created_date": "20220720"
+        },
+        {
+          "class_id": "클래스13",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스13",
+          "user_nm": "이디야",
+          "class_count": 15,
+          "class_type": "클래스13",
+          "test_rate": 65,
+          "created_date": "20220416"
+        },
+        {
+          "class_id": "클래스14",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스14",
+          "user_nm": "이디야",
+          "class_count": 20,
+          "class_type": "클래스14",
+          "test_rate": 45,
+          "created_date": "20220502"
+        },
+        {
+          "class_id": "클래스15",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스15",
+          "user_nm": "수학선생",
+          "class_count": 30,
+          "class_type": "클래스15",
+          "test_rate": 55,
+          "created_date": "20220607"
+        },
+        {
+          "class_id": "클래스16",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스16",
+          "user_nm": "이디야",
+          "class_count": 26,
+          "class_type": "클래스16",
+          "test_rate": 15,
+          "created_date": "20220220"
+        },
+        {
+          "class_id": "클래스17",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스17",
+          "user_nm": "춘식이",
+          "class_count": 60,
+          "class_type": "클래스17",
+          "test_rate": 32,
+          "created_date": "20220201"
+        },
+        {
+          "class_id": "클래스18",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스18",
+          "user_nm": "게토레이",
+          "class_count": 10,
+          "class_type": "클래스18",
+          "test_rate": 85,
+          "created_date": "20220820"
+        },
+        {
+          "class_id": "클래스19",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스19",
+          "user_nm": "수학선생",
+          "class_count": 37,
+          "class_type": "클래스19",
+          "test_rate": 41,
+          "created_date": "20220313"
+        },
+        {
+          "class_id": "클래스20",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스20",
+          "user_nm": "게토레이",
+          "class_count": 40,
+          "class_type": "클래스20",
+          "test_rate": 50,
+          "created_date": "20220120"
+        },
+        {
+          "class_id": "클래스1",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "user_nm": "춘식이",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220311"
+        },
+        {
+          "class_id": "클래스2",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "user_nm": "수학선생",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220807"
+        }
+      ]
+    }
+}

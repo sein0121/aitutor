@@ -1,0 +1,1369 @@
+{
+  "code": 200,
+  "result": {
+    "org_list": [
+      {
+        "org_id": "E00001",
+        "org_nm": "소다초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "김선생"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "이선생"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "박선생"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "최선생"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "강선생"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "백선생"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "서선생"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "윤선생"
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": "오선생"
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": "남선생"
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": "여선생"
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": "노선생"
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": "조선생"
+          },
+          {
+            "user_id": "tutor14",
+            "user_type": "20",
+            "user_nm": "배선생"
+          },
+          {
+            "user_id": "tutor15",
+            "user_type": "20",
+            "user_nm": "남궁선생"
+          },
+          {
+            "user_id": "tutor16",
+            "user_type": "20",
+            "user_nm": "황선생"
+          },
+          {
+            "user_id": "tutor17",
+            "user_type": "20",
+            "user_nm": "설선생"
+          },
+          {
+            "user_id": "tutor18",
+            "user_type": "20",
+            "user_nm": "왕선생"
+          },
+          {
+            "user_id": "tutor19",
+            "user_type": "20",
+            "user_nm": "류선생"
+          },
+          {
+            "user_id": "tutor20",
+            "user_type": "20",
+            "user_nm": "봉선생"
+          }
+        ]
+      },
+      {
+        "org_id": "E00002",
+        "org_nm": "애자일초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "박수학"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "최고수학"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "나수학"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "짱수학"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "탑수학"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor14",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "E00003",
+        "org_nm": "고래초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "새우"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "상어"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "고등어"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "참치"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "갈치"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "광어"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "연어"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "삼치"
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": "한치"
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": "문어"
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": "장어"
+          }
+        ]
+      },
+      {
+        "org_id": "E00004",
+        "org_nm": "옥수초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "T1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "T2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "T3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "T4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "T5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "T6"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "T7"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "T8"
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": "T9"
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": "T10"
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": "T11"
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": "T12"
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": "T13"
+          },
+          {
+            "user_id": "tutor14",
+            "user_type": "20",
+            "user_nm": "T14"
+          }
+        ]
+      },
+      {
+        "org_id": "E00005",
+        "org_nm": "선릉초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "선릉1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "선릉2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "선릉3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "선릉4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "선릉5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "선릉6"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "선릉7"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "선릉8"
+          }
+        ]
+      },
+      {
+        "org_id": "E00006",
+        "org_nm": "서초초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "서초1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "서초2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "서초3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "서초4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "E00007",
+        "org_nm": "강남초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "강남1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "강남2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "강남3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "강남4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "강남5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "E00008",
+        "org_nm": "서울초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "서울1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "서울2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "서울3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "서울4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "서울5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "서울6"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "서울7"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "서울8"
+          }
+        ]
+      },
+      {
+        "org_id": "E00009",
+        "org_nm": "대한초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "대한1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "대한2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "대한3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "대한4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "대한5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "대한6"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          },{
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor14",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor15",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor16",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor17",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor18",
+            "user_type": "20",
+            "user_nm": ""
+          },{
+            "user_id": "tutor19",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor20",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "E00010",
+        "org_nm": "민국초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "박수학"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "최고수학"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "나수학"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "짱수학"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "탑수학"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "E00011",
+        "org_nm": "만세초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "만세1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "만세2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "만세3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "만세4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "만세5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "E00012",
+        "org_nm": "필승초등학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "필승1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "필승2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor14",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "M00001",
+        "org_nm": "애자일중학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "애자일1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "애자일2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "애자일3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "애자일4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "애자일5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "애자일6"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "애자일7"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "애자일8"
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": "애자일9"
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": "애자일10"
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": "애자일11"
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": "애자일12"
+          }
+        ]
+      },
+      {
+        "org_id": "M00002",
+        "org_nm": "소다중학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "소다1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "소다2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "소다3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "소다4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "소다5"
+          }
+        ]
+      },
+      {
+        "org_id": "M00003",
+        "org_nm": "가가중학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "가가1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "가가2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "가가3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "가가4"
+          },{
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "가가5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": ""
+          },{
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": ""
+          },{
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": ""
+          },{
+            "user_id": "tutor14",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor15",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor16",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "M00004",
+        "org_nm": "나나중학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "나나1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "나나2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "나나3"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "나나4"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "나나5"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "나나6"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "나나7"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "나나8"
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": "나나9"
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": "나나10"
+          }
+        ]
+      },
+      {
+        "org_id": "M00005",
+        "org_nm": "다다중학교",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "다다1"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "다다2"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "다다3"
+          },
+          {
+            "user_id": "tutor",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor",
+            "user_type": "20",
+            "user_nm": ""
+          },{
+            "user_id": "tutor",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor",
+            "user_type": "20",
+            "user_nm": ""
+          },{
+            "user_id": "tutor",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "A00001",
+        "org_nm": "배뜨학원",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "배트맨"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "슈퍼맨"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "스파이더맨"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "앤트맨"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor14",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor15",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor16",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "A00002",
+        "org_nm": "조커아카데미",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "조커"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "할리퀸"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": ""
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      },
+      {
+        "org_id": "A00003",
+        "org_nm": "다크나이트학원",
+        "user_list": [
+          {
+            "user_id": "admin1",
+            "user_type": "10",
+            "user_nm": "ADMIN"
+          },
+          {
+            "user_id": "tutor1",
+            "user_type": "20",
+            "user_nm": "다크나이트"
+          },
+          {
+            "user_id": "tutor2",
+            "user_type": "20",
+            "user_nm": "화이트나이트"
+          },
+          {
+            "user_id": "tutor3",
+            "user_type": "20",
+            "user_nm": "레드나이트"
+          },
+          {
+            "user_id": "tutor4",
+            "user_type": "20",
+            "user_nm": "블루나이트"
+          },
+          {
+            "user_id": "tutor5",
+            "user_type": "20",
+            "user_nm": "그린나이트"
+          },
+          {
+            "user_id": "tutor6",
+            "user_type": "20",
+            "user_nm": "옐로우나이트"
+          },
+          {
+            "user_id": "tutor7",
+            "user_type": "20",
+            "user_nm": "핑크나이트"
+          },
+          {
+            "user_id": "tutor8",
+            "user_type": "20",
+            "user_nm": "퍼플나이트"
+          },
+          {
+            "user_id": "tutor9",
+            "user_type": "20",
+            "user_nm": "민트나이트"
+          },
+          {
+            "user_id": "tutor10",
+            "user_type": "20",
+            "user_nm": "오렌지나이트"
+          },
+          {
+            "user_id": "tutor11",
+            "user_type": "20",
+            "user_nm": "그레이나이트"
+          },
+          {
+            "user_id": "tutor12",
+            "user_type": "20",
+            "user_nm": "브라운나이트"
+          },
+          {
+            "user_id": "tutor13",
+            "user_type": "20",
+            "user_nm": ""
+          }
+        ]
+      }
+    ]
+  }
+}

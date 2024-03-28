@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.agilesoda.aitutor.repository.mapper.UserPathInfoRepository">
+
+    <select id="selectAll" resultType="com.agilesoda.aitutor.domain.UserPathInfo">
+        select *
+        from user_path_info
+    </select>
+
+    <select id="selectById" parameterType="String" resultType="com.agilesoda.aitutor.domain.UserPathInfo">
+        select *
+        from user_path_info
+        where user_id = #{userId}
+    </select>
+
+    <select id="selectTotalTime" parameterType="com.agilesoda.aitutor.dto.RequestDto" resultType="Integer">
+        select total_time
+        from user_path_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+          and user_test_level = #{user_test_level}
+    </select>
+
+    <select id="selectPathInfo" parameterType="String" resultType="String">
+        select path_nm
+        from user_path_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+          and user_test_level = '99';
+    </select>
+
+    <select id="selectTuStPathInfo" parameterType="String" resultType="String">
+        select path_nm
+        from user_path_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_level = '99';
+    </select>
+
+    <select id="selectGraphPath" parameterType="String" resultType="String">
+        SELECT graph_path
+        FROM user_path_info
+        WHERE org_id=#{org_id}
+          AND user_id=#{user_id}
+          AND user_grd=#{user_grd}
+          AND user_test_grd=#{user_test_grd}
+          AND user_test_level ='99'
+    </select>
+
+    <select id="selectLeadTime" parameterType="String" resultType="String">
+        select total_time
+        from user_path_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+          and user_test_level = #{user_test_level}
+    </select>
+
+    <select id="selectTutorLeadTime" parameterType="String" resultType="String">
+        select total_time
+        from user_path_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_level = #{user_test_level}
+    </select>
+
+    <update id="updateTotalTime" parameterType="com.agilesoda.aitutor.domain.UserPathInfo">
+        update user_path_info
+        set total_time       = #{totalTime}
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+    </update>
+
+    <update id="updateResultData" parameterType="com.agilesoda.aitutor.domain.UserPathInfo">
+        update user_path_info
+        set total_time       = #{totalTime},
+            user_qst_path    = #{userQstPath},
+            user_answer_path = #{userAnswerPath}
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+    </update>
+
+    <select id="selectResultPath" parameterType="com.agilesoda.aitutor.domain.UserPathInfo"
+            resultType="com.agilesoda.aitutor.dto.student.AnswerResultDto">
+
+        select user_qst_path as q_list, user_answer_path as r_list
+        from user_path_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level != '99'
+
+    </select>
+
+    <select id="selectUserTestLevels" parameterType="String" resultType="String">
+        select user_test_level
+        from user_path_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+          and user_test_grd = #{user_test_grd}
+        order by user_test_level desc
+    </select>
+
+    <select id="selectTutorUserLevels" parameterType="String" resultType="String">
+        select user_test_level
+        from user_path_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+          and user_grd = #{user_grd}
+        order by user_test_level desc
+    </select>
+
+
+    <insert id="saveInfo" parameterType="com.agilesoda.aitutor.domain.UserPathInfo">
+        insert into user_path_info (org_id, user_id, user_grd, user_test_grd, user_test_level, next_test_list, path_nm, path_id, graph_path, user_qst_path, user_answer_path, total_time)
+        values (#{orgId}, #{userId}, #{userGrd}, #{userTestGrd}, #{userTestLevel}, #{next_test_list}, #{path_nm}, #{path_id}, #{graph_path}, #{userQstPath}, #{userAnswerPath}, #{totalTime})
+    </insert>
+
+    <select id="selectTest" parameterType="com.agilesoda.aitutor.domain.UserPathInfo" resultType="String">
+        select user_path
+        from user_path_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+    </select>
+
+    <select id="selectFinalGraph" parameterType="String" resultType="com.agilesoda.aitutor.dto.student.FinalGraphDto">
+        select graph_path
+        from user_path_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+    </select>
+
+    <select id="selectLoginInfo" parameterType="String" resultType="com.agilesoda.aitutor.dto.user.UserLoginInfoDto">
+        select user_test_level, total_time
+        from user_path_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+        order by user_test_level desc;
+    </select>
+
+    <delete id="deleteExceptionData" parameterType="String">
+        DELETE
+        FROM user_path_info
+        WHERE org_id = #{orgId}
+          AND user_id = #{userId}
+        <if test="userGrd != null">
+            AND user_grd = #{userGrd}
+        </if>
+        <if test="userGrd != null">
+            AND user_test_grd = #{userTestGrd}
+        </if>
+    </delete>
+
+
+</mapper>

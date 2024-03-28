@@ -1,0 +1,1046 @@
+{
+  "rsp_code" : 200,
+  "result": {
+    "edges": [
+      {
+        "arrows": "to",
+        "from": "S0004",
+        "to": "S0005",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0005",
+        "to": "S0006",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0006",
+        "to": "S0007",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0007",
+        "to": "S0009",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0009",
+        "to": "S0010",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0219",
+        "to": "S0220",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0220",
+        "to": "S0221",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0221",
+        "to": "S0222",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0222",
+        "to": "S0223",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0223",
+        "to": "S0225",
+        "width": 7
+      },
+      {
+        "arrows": "to",
+        "from": "S0000",
+        "to": "S0001"
+      },
+      {
+        "arrows": "to",
+        "from": "S0001",
+        "to": "S0002"
+      },
+      {
+        "arrows": "to",
+        "from": "S0000",
+        "to": "S0002"
+      },
+      {
+        "arrows": "to",
+        "from": "S0003",
+        "to": "S0005"
+      },
+      {
+        "arrows": "to",
+        "from": "S0004",
+        "to": "S0006"
+      },
+      {
+        "arrows": "to",
+        "from": "S0003",
+        "to": "S0006"
+      },
+      {
+        "arrows": "to",
+        "from": "S0005",
+        "to": "S0008"
+      },
+      {
+        "arrows": "to",
+        "from": "S0003",
+        "to": "S0008"
+      },
+      {
+        "arrows": "to",
+        "from": "S0006",
+        "to": "S0009"
+      },
+      {
+        "arrows": "to",
+        "from": "S0004",
+        "to": "S0009"
+      },
+      {
+        "arrows": "to",
+        "from": "S0006",
+        "to": "S0010"
+      },
+      {
+        "arrows": "to",
+        "from": "S0007",
+        "to": "S0010"
+      },
+      {
+        "arrows": "to",
+        "from": "S0009",
+        "to": "S0011"
+      },
+      {
+        "arrows": "to",
+        "from": "S0009",
+        "to": "S0012"
+      },
+      {
+        "arrows": "to",
+        "from": "S0008",
+        "to": "S0013"
+      },
+      {
+        "arrows": "to",
+        "from": "S0013",
+        "to": "S0014"
+      },
+      {
+        "arrows": "to",
+        "from": "S0008",
+        "to": "S0014"
+      },
+      {
+        "arrows": "to",
+        "from": "S0014",
+        "to": "S0015"
+      },
+      {
+        "arrows": "to",
+        "from": "S0008",
+        "to": "S0015"
+      },
+      {
+        "arrows": "to",
+        "from": "S0013",
+        "to": "S0016"
+      },
+      {
+        "arrows": "to",
+        "from": "S0014",
+        "to": "S0016"
+      },
+      {
+        "arrows": "to",
+        "from": "S0015",
+        "to": "S0016"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0017"
+      },
+      {
+        "arrows": "to",
+        "from": "S0017",
+        "to": "S0018"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0018"
+      },
+      {
+        "arrows": "to",
+        "from": "S0017",
+        "to": "S0019"
+      },
+      {
+        "arrows": "to",
+        "from": "S0018",
+        "to": "S0019"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0019"
+      },
+      {
+        "arrows": "to",
+        "from": "S0017",
+        "to": "S0020"
+      },
+      {
+        "arrows": "to",
+        "from": "S0018",
+        "to": "S0020"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0020"
+      },
+      {
+        "arrows": "to",
+        "from": "S0016",
+        "to": "S0023"
+      },
+      {
+        "arrows": "to",
+        "from": "S0022",
+        "to": "S0023"
+      },
+      {
+        "arrows": "to",
+        "from": "S0023",
+        "to": "S0024"
+      },
+      {
+        "arrows": "to",
+        "from": "S0022",
+        "to": "S0024"
+      },
+      {
+        "arrows": "to",
+        "from": "S0023",
+        "to": "S0025"
+      },
+      {
+        "arrows": "to",
+        "from": "S0022",
+        "to": "S0025"
+      },
+      {
+        "arrows": "to",
+        "from": "S0021",
+        "to": "S0025"
+      },
+      {
+        "arrows": "to",
+        "from": "S0230",
+        "to": "S0025"
+      },
+      {
+        "arrows": "to",
+        "from": "S0229",
+        "to": "S0025"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0025"
+      },
+      {
+        "arrows": "to",
+        "from": "S0228",
+        "to": "S0025"
+      },
+      {
+        "arrows": "to",
+        "from": "S0021",
+        "to": "S0026"
+      },
+      {
+        "arrows": "to",
+        "from": "S0009",
+        "to": "S0026"
+      },
+      {
+        "arrows": "to",
+        "from": "S0023",
+        "to": "S0027"
+      },
+      {
+        "arrows": "to",
+        "from": "S0022",
+        "to": "S0027"
+      },
+      {
+        "arrows": "to",
+        "from": "S0021",
+        "to": "S0028"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0028"
+      },
+      {
+        "arrows": "to",
+        "from": "S0025",
+        "to": "S0028"
+      },
+      {
+        "arrows": "to",
+        "from": "S0028",
+        "to": "S0029"
+      },
+      {
+        "arrows": "to",
+        "from": "S0021",
+        "to": "S0029"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0029"
+      },
+      {
+        "arrows": "to",
+        "from": "S0025",
+        "to": "S0029"
+      },
+      {
+        "arrows": "to",
+        "from": "S0028",
+        "to": "S0030"
+      },
+      {
+        "arrows": "to",
+        "from": "S0231",
+        "to": "S0030"
+      },
+      {
+        "arrows": "to",
+        "from": "S0119",
+        "to": "S0120"
+      },
+      {
+        "arrows": "to",
+        "from": "S0119",
+        "to": "S0121"
+      },
+      {
+        "arrows": "to",
+        "from": "S0010",
+        "to": "S0122"
+      },
+      {
+        "arrows": "to",
+        "from": "S0121",
+        "to": "S0122"
+      },
+      {
+        "arrows": "to",
+        "from": "S0008",
+        "to": "S0122"
+      },
+      {
+        "arrows": "to",
+        "from": "S0013",
+        "to": "S0123"
+      },
+      {
+        "arrows": "to",
+        "from": "S0017",
+        "to": "S0123"
+      },
+      {
+        "arrows": "to",
+        "from": "S0121",
+        "to": "S0123"
+      },
+      {
+        "arrows": "to",
+        "from": "S0122",
+        "to": "S0123"
+      },
+      {
+        "arrows": "to",
+        "from": "S0121",
+        "to": "S0124"
+      },
+      {
+        "arrows": "to",
+        "from": "S0124",
+        "to": "S0125"
+      },
+      {
+        "arrows": "to",
+        "from": "S0121",
+        "to": "S0126"
+      },
+      {
+        "arrows": "to",
+        "from": "S0124",
+        "to": "S0126"
+      },
+      {
+        "arrows": "to",
+        "from": "S0127",
+        "to": "S0128"
+      },
+      {
+        "arrows": "to",
+        "from": "S0127",
+        "to": "S0129"
+      },
+      {
+        "arrows": "to",
+        "from": "S0131",
+        "to": "S0130"
+      },
+      {
+        "arrows": "to",
+        "from": "S0130",
+        "to": "S0131"
+      },
+      {
+        "arrows": "to",
+        "from": "S0130",
+        "to": "S0132"
+      },
+      {
+        "arrows": "to",
+        "from": "S0130",
+        "to": "S0133"
+      },
+      {
+        "arrows": "to",
+        "from": "S0133",
+        "to": "S0134"
+      },
+      {
+        "arrows": "to",
+        "from": "S0130",
+        "to": "S0134"
+      },
+      {
+        "arrows": "to",
+        "from": "S0135",
+        "to": "S0136"
+      },
+      {
+        "arrows": "to",
+        "from": "S0135",
+        "to": "S0137"
+      },
+      {
+        "arrows": "to",
+        "from": "S0138",
+        "to": "S0139"
+      },
+      {
+        "arrows": "to",
+        "from": "S0138",
+        "to": "S0140"
+      },
+      {
+        "arrows": "to",
+        "from": "S0139",
+        "to": "S0140"
+      },
+      {
+        "arrows": "to",
+        "from": "S0234",
+        "to": "S0141"
+      },
+      {
+        "arrows": "to",
+        "from": "S0141",
+        "to": "S0142"
+      },
+      {
+        "arrows": "to",
+        "from": "S0141",
+        "to": "S0143"
+      },
+      {
+        "arrows": "to",
+        "from": "S0142",
+        "to": "S0143"
+      },
+      {
+        "arrows": "to",
+        "from": "S0222",
+        "to": "S0221"
+      },
+      {
+        "arrows": "to",
+        "from": "S0223",
+        "to": "S0224"
+      },
+      {
+        "arrows": "to",
+        "from": "S0227",
+        "to": "S0226"
+      },
+      {
+        "arrows": "to",
+        "from": "S0226",
+        "to": "S0227"
+      },
+      {
+        "arrows": "to",
+        "from": "S0130",
+        "to": "S0231"
+      },
+      {
+        "arrows": "to",
+        "from": "S0231",
+        "to": "S0232"
+      },
+      {
+        "arrows": "to",
+        "from": "S0131",
+        "to": "S0233"
+      },
+      {
+        "arrows": "to",
+        "from": "S0222",
+        "to": "S0233"
+      },
+      {
+        "arrows": "to",
+        "from": "S0130",
+        "to": "S0233"
+      },
+      {
+        "arrows": "to",
+        "from": "S0219",
+        "to": "S0234"
+      },
+      {
+        "arrows": "to",
+        "from": "S0234",
+        "to": "S0235"
+      },
+      {
+        "arrows": "to",
+        "from": "S0222",
+        "to": "S0235"
+      },
+      {
+        "arrows": "to",
+        "from": "S0259",
+        "to": "S0260"
+      },
+      {
+        "arrows": "to",
+        "from": "S0123",
+        "to": "S0261"
+      },
+      {
+        "arrows": "to",
+        "from": "S0261",
+        "to": "S0262"
+      },
+      {
+        "arrows": "to",
+        "from": "S0123",
+        "to": "S0262"
+      }
+    ],
+    "heading": "",
+    "height": "1000px",
+    "nodes": [
+      {
+        "color": "#BF5A95",
+        "id": "S0120",
+        "image": "https://user-images.githubusercontent.com/86637242/213362065-322e592f-ea24-4835-9597-b181e44f7f10.svg",
+        "label": "대응 관계를 식으로 나 타내기",
+        "shape": "circularImage",
+        "size": 50
+      },
+      {
+        "color": "#1E99D6",
+        "id": "S0004",
+        "image": "https://user-images.githubusercontent.com/86637242/213362065-322e592f-ea24-4835-9597-b181e44f7f10.svg",
+        "label": "배수",
+        "shape": "circularImage",
+        "size": 50
+      },
+      {
+        "color": "#1F7D4F",
+        "id": "S0219",
+        "image": "https://user-images.githubusercontent.com/86637242/213362065-322e592f-ea24-4835-9597-b181e44f7f10.svg",
+        "label": "정다각형의 둘레",
+        "shape": "circularImage",
+        "size": 50
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0000",
+        "label": "덧셈과 뺄셈이 섞여 있는 식",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0001",
+        "label": "곱셈과 나눗셈이 섞여 있는 식",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0002",
+        "label": "덧셈, 뺄셈, 곱셈, 나눗셈이 섞여 있는 식",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0003",
+        "label": "약수",
+        "shape": "dot"
+      },
+      {
+        "color": "#1E99D6",
+        "id": "S0005",
+        "label": "공약수와 최대공약수",
+        "shape": "dot"
+      },
+      {
+        "color": "#1E99D6",
+        "id": "S0006",
+        "label": "공배수와 최소공배수",
+        "shape": "dot"
+      },
+      {
+        "color": "#1E99D6",
+        "id": "S0007",
+        "label": "크기가 같은 분수",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0008",
+        "label": "약분",
+        "shape": "dot"
+      },
+      {
+        "color": "#1E99D6",
+        "id": "S0009",
+        "label": "통분",
+        "shape": "dot"
+      },
+      {
+        "color": "#1E99D6",
+        "id": "S0010",
+        "label": "분수와 소수의 크기 비교",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0011",
+        "label": "분수의 덧셈",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0012",
+        "label": "분수의 뺄셈",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0013",
+        "label": "(분수)X(자연수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0014",
+        "label": "(자연수)X(분수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0015",
+        "label": "(진분수)X(진분수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0016",
+        "label": "(대분수)X(대분수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0017",
+        "label": "(소수)X(자연수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0018",
+        "label": "(자연수)X(소수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0019",
+        "label": "(1보다 작은 소수)X(1보다 작은 소수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0020",
+        "label": "(1보다 큰 소수)X(1보다 큰 소수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0021",
+        "label": "곱의 소수점 위치",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0022",
+        "label": "(자연수)/(자연수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0023",
+        "label": "(분 수)/(자연수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0024",
+        "label": "(대분수)/(자연수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0025",
+        "label": "소수의 나눗셈",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0026",
+        "label": "(분수)/(분수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0027",
+        "label": "분수를 곱셈으로 나타내기",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0028",
+        "label": "(소수)/(소수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0029",
+        "label": "(자연수)/(소수)",
+        "shape": "dot"
+      },
+      {
+        "color": "#C8E3F3",
+        "id": "S0030",
+        "label": "몫의 반올림과 나누어 주고 남는 양",
+        "shape": "dot"
+      },
+      {
+        "color": "#E6BDD5",
+        "id": "S0119",
+        "label": "두 양 사이의 관계",
+        "shape": "dot"
+      },
+      {
+        "color": "#E6BDD5",
+        "id": "S0121",
+        "label": "비",
+        "shape": "dot"
+      },
+      {
+        "color": "#E6BDD5",
+        "id": "S0122",
+        "label": "비율",
+        "shape": "dot"
+      },
+      {
+        "color": "#E6BDD5",
+        "id": "S0123",
+        "label": "백분율",
+        "shape": "dot"
+      },
+      {
+        "color": "#E6BDD5",
+        "id": "S0124",
+        "label": "비의 성질",
+        "shape": "dot"
+      },
+      {
+        "color": "#E6BDD5",
+        "id": "S0125",
+        "label": "비례식",
+        "shape": "dot"
+      },
+      {
+        "color": "#E6BDD5",
+        "id": "S0126",
+        "label": "비례배분",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0127",
+        "label": "도형의 합동",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0128",
+        "label": "선대칭도형",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0129",
+        "label": " 점대칭도형",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0130",
+        "label": "직육면체",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0131",
+        "label": "정육면체",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0132",
+        "label": "직육면체의 성질과 겨냥도",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0133",
+        "label": "정육면체의 전개도",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0134",
+        "label": "직 육면체의 전개도",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0135",
+        "label": "각기둥",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0136",
+        "label": "각기둥의 전개도",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0137",
+        "label": "각뿔",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0138",
+        "label": "위, 앞, 옆에서 본 모양",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0139",
+        "label": "위에서  본 모양에 쓴 수",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0140",
+        "label": "층별로 나타낸 모양",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0141",
+        "label": "원기둥",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0142",
+        "label": "원뿔",
+        "shape": "dot"
+      },
+      {
+        "color": "#F8D9B5",
+        "id": "S0143",
+        "label": "구",
+        "shape": "dot"
+      },
+      {
+        "color": "#1F7D4F",
+        "id": "S0220",
+        "label": "사각형의 둘레",
+        "shape": "dot"
+      },
+      {
+        "color": "#1F7D4F",
+        "id": "S0221",
+        "label": "넓이의 단위",
+        "shape": "dot"
+      },
+      {
+        "color": "#1F7D4F",
+        "id": "S0222",
+        "label": "직사 각형의 넓이",
+        "shape": "dot"
+      },
+      {
+        "color": "#1F7D4F",
+        "id": "S0223",
+        "label": "평행사변형과 삼각형의 넓이",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0224",
+        "label": "마름모의 넓이",
+        "shape": "dot"
+      },
+      {
+        "color": "#1F7D4F",
+        "id": "S0225",
+        "label": "사다리꼴의 넓이",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0226",
+        "label": "이상과 이하",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0227",
+        "label": "초과와 미만",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0228",
+        "label": "올림",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0229",
+        "label": "버림",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0230",
+        "label": "반올림",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0231",
+        "label": "직육면체의 부피",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0232",
+        "label": "m^3 알아보기",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0233",
+        "label": "직육면체의 겉넓이",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0234",
+        "label": "원주와 원주율",
+        "shape": "dot"
+      },
+      {
+        "color": "#B4D0C2",
+        "id": "S0235",
+        "label": "원의 넓이",
+        "shape": "dot"
+      },
+      {
+        "color": "#B2C5F1",
+        "id": "S0259",
+        "label": "평균",
+        "shape": "dot"
+      },
+      {
+        "color": "#B2C5F1",
+        "id": "S0260",
+        "label": "일이 일어날 가능성",
+        "shape": "dot"
+      },
+      {
+        "color": "#B2C5F1",
+        "id": "S0261",
+        "label": "띠그래프",
+        "shape": "dot"
+      },
+      {
+        "color": "#B2C5F1",
+        "id": "S0262",
+        "label": "원그래프",
+        "shape": "dot"
+      }
+    ],
+    "options": "{\n    \"configure\": {\n        \"enabled\": false\n    },\n    \"edges\": {\n        \"color\": {\n            \"inherit\": true\n        },\n        \"smooth\": {\n            \"enabled\": true,\n            \"type\": \"dynamic\"\n        }\n    },\n    \"interaction\": {\n        \"dragNodes\": true,\n        \"hideEdgesOnDrag\": false,\n        \"hideNodesOnDrag\": false\n    },\n    \"physics\": {\n        \"enabled\": true,\n        \"repulsion\": {\n            \"centralGravity\": 0.2,\n            \"damping\": 0.09,\n            \"nodeDistance\": 100,\n            \"springConstant\": 0.05,\n            \"springLength\": 200\n        },\n        \"solver\": \"repulsion\",\n        \"stabilization\": {\n            \"enabled\": true,\n            \"fit\": true,\n            \"iterations\": 1000,\n            \"onlyDynamicEdges\": false,\n            \"updateInterval\": 50\n        }\n    }\n}",
+    "width": "100%"
+  }
+}

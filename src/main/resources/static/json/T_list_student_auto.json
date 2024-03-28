@@ -1,0 +1,16 @@
+{
+  "code": 221,
+  "result": {
+      "id_list": [
+        {
+          "student_id": "수학천재01"
+        },
+        {
+          "student_id": "수학천재02"
+        },
+        {
+          "student_id": "수학천재05"
+        }
+      ]
+    }
+}

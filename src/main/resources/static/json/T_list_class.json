@@ -1,0 +1,1093 @@
+{
+  "code": 200,
+  "result": {
+      "class_list": [
+        {
+          "class_id": "C0001",
+          "class_gbn": "초1-1",
+          "class_nm": "불꽃수학",
+          "class_count": 20,
+          "class_type": "불꽃수학",
+          "test_rate": 25,
+          "created_date": "20220616"
+        },
+        {
+          "class_id": "C0002",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220524"
+        },
+        {
+          "class_id": "C0003",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220721"
+        },
+        {
+          "class_id": "C0004",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220615"
+        },
+        {
+          "class_id": "C0005",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220405"
+        },
+        {
+          "class_id": "C0006",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220409"
+        },
+        {
+          "class_id": "C0007",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220414"
+        },
+        {
+          "class_id": "C0008",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220220"
+        },
+        {
+          "class_id": "C0009",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220125"
+        },
+        {
+          "class_id": "C0010",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220326"
+        },
+        {
+          "class_id": "C0011",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스11",
+          "class_count": 20,
+          "class_type": "클래스11",
+          "test_rate": 25,
+          "created_date": "20220520"
+        },
+        {
+          "class_id": "C0012",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스12",
+          "class_count": 50,
+          "class_type": "클래스12",
+          "test_rate": 72,
+          "created_date": "20220720"
+        },
+        {
+          "class_id": "C0013",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스13",
+          "class_count": 15,
+          "class_type": "클래스13",
+          "test_rate": 65,
+          "created_date": "20220416"
+        },
+        {
+          "class_id": "C0014",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스14",
+          "class_count": 20,
+          "class_type": "클래스14",
+          "test_rate": 45,
+          "created_date": "20220502"
+        },
+        {
+          "class_id": "C0015",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스15",
+          "class_count": 30,
+          "class_type": "클래스15",
+          "test_rate": 55,
+          "created_date": "20220607"
+        },
+        {
+          "class_id": "C0016",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스16",
+          "class_count": 26,
+          "class_type": "클래스16",
+          "test_rate": 15,
+          "created_date": "20220220"
+        },
+        {
+          "class_id": "C0017",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스17",
+          "class_count": 60,
+          "class_type": "클래스17",
+          "test_rate": 32,
+          "created_date": "20220201"
+        },
+        {
+          "class_id": "C0018",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스18",
+          "class_count": 10,
+          "class_type": "클래스18",
+          "test_rate": 85,
+          "created_date": "20220820"
+        },
+        {
+          "class_id": "C0019",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스19",
+          "class_count": 37,
+          "class_type": "클래스19",
+          "test_rate": 41,
+          "created_date": "20220313"
+        },
+        {
+          "class_id": "C0020",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스20",
+          "class_count": 40,
+          "class_type": "클래스20",
+          "test_rate": 50,
+          "created_date": "20220120"
+        },
+        {
+          "class_id": "C0021",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220311"
+        },
+        {
+          "class_id": "C0022",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220807"
+        },
+        {
+          "class_id": "C0023",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220820"
+        },
+        {
+          "class_id": "C0024",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20221127"
+        },
+        {
+          "class_id": "C0025",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20221017"
+        },
+        {
+          "class_id": "C0026",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220911"
+        },
+        {
+          "class_id": "C0027",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20221102"
+        },
+        {
+          "class_id": "C0028",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220616"
+        },
+        {
+          "class_id": "C0029",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220411"
+        },
+        {
+          "class_id": "C0030",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220614"
+        },
+        {
+          "class_id": "C0031",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220317"
+        },
+        {
+          "class_id": "C0032",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20221004"
+        },
+        {
+          "class_id": "C0033",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220924"
+        },
+        {
+          "class_id": "C0034",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220803"
+        },
+        {
+          "class_id": "C0035",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220328"
+        },
+        {
+          "class_id": "C0036",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220626"
+        },
+        {
+          "class_id": "C0037",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220309"
+        },
+        {
+          "class_id": "C0038",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220908"
+        },
+        {
+          "class_id": "C0039",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220226"
+        },
+        {
+          "class_id": "C0040",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20221019"
+        },
+        {
+          "class_id": "C0041",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20221120"
+        },
+        {
+          "class_id": "C0042",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220206"
+        },
+        {
+          "class_id": "C0043",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220123"
+        },
+        {
+          "class_id": "C0044",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20221209"
+        },
+        {
+          "class_id": "C0045",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220206"
+        },
+        {
+          "class_id": "C0046",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220904"
+        },
+        {
+          "class_id": "C0047",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220421"
+        },
+        {
+          "class_id": "C0048",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220708"
+        },
+        {
+          "class_id": "C0049",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220112"
+        },
+        {
+          "class_id": "C0050",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220118"
+        },
+        {
+          "class_id": "C0051",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220516"
+        },
+        {
+          "class_id": "C0052",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20221018"
+        },
+        {
+          "class_id": "C0053",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220408"
+        },
+        {
+          "class_id": "C0054",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220509"
+        },
+        {
+          "class_id": "C0055",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220319"
+        },
+        {
+          "class_id": "C0056",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220611"
+        },
+        {
+          "class_id": "C0057",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220120"
+        },
+        {
+          "class_id": "C0058",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220304"
+        },
+        {
+          "class_id": "C0059",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220604"
+        },
+        {
+          "class_id": "C0060",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220701"
+        },
+        {
+          "class_id": "C0061",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20221219"
+        },
+        {
+          "class_id": "C0062",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220105"
+        },
+        {
+          "class_id": "C0063",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220725"
+        },
+        {
+          "class_id": "C0064",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20221012"
+        },
+        {
+          "class_id": "C0065",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20221219"
+        },
+        {
+          "class_id": "C0066",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220503"
+        },
+        {
+          "class_id": "C0067",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20221020"
+        },
+        {
+          "class_id": "C0068",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220322"
+        },
+        {
+          "class_id": "C0069",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220217"
+        },
+        {
+          "class_id": "C0070",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220918"
+        },
+        {
+          "class_id": "C0071",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20221024"
+        },
+        {
+          "class_id": "C0072",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220511"
+
+        },
+        {
+          "class_id": "C0073",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220317"
+        },
+        {
+          "class_id": "C0074",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220201"
+        },
+        {
+          "class_id": "C0075",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20221221"
+        },
+        {
+          "class_id": "C0076",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220807"
+
+        },
+        {
+          "class_id": "C0077",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220426"
+
+        },
+        {
+          "class_id": "C0078",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220717"
+
+        },
+        {
+          "class_id": "C0079",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220612"
+
+        },
+        {
+          "class_id": "C0080",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220819"
+
+        },
+        {
+          "class_id": "C0081",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20221224"
+        },
+        {
+          "class_id": "C0082",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220615"
+        },
+        {
+          "class_id": "C0083",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220607"
+        },
+        {
+          "class_id": "C0084",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220817"
+        },
+        {
+          "class_id": "C0085",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220207"
+        },
+        {
+          "class_id": "C0086",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220522"
+        },
+        {
+          "class_id": "C0087",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20221227"
+        },
+        {
+          "class_id": "C0088",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220625"
+        },
+        {
+          "class_id": "C0089",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220310"
+        },
+        {
+          "class_id": "C0090",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220303"
+        },
+        {
+          "class_id": "C0091",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220812"
+        },
+        {
+          "class_id": "C0092",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20220507"
+        },
+        {
+          "class_id": "C0093",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220601"
+        },
+        {
+          "class_id": "C0094",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220622"
+        },
+        {
+          "class_id": "C0095",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220609"
+        },
+        {
+          "class_id": "C0096",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220808"
+        },
+        {
+          "class_id": "C0097",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220127"
+        },
+        {
+          "class_id": "C0098",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220404"
+        },
+        {
+          "class_id": "C0099",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220705"
+        },
+        {
+          "class_id": "C0100",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220218"
+        },
+        {
+          "class_id": "C0101",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220616"
+        },
+        {
+          "class_id": "C0102",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20221216"
+        },
+        {
+          "class_id": "C0103",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220320"
+        },
+        {
+          "class_id": "C0104",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220907"
+        },
+        {
+          "class_id": "C0105",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220428"
+        },
+        {
+          "class_id": "C0106",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220115"
+        },
+        {
+          "class_id": "C0107",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20221005"
+        },
+        {
+          "class_id": "C0108",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220110"
+        },
+        {
+          "class_id": "C0109",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220210"
+        },
+        {
+          "class_id": "C0110",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20221213"
+        },
+        {
+          "class_id": "C0111",
+          "class_gbn": "초1-1",
+          "class_nm": "클래스1",
+          "class_count": 20,
+          "class_type": "클래스1",
+          "test_rate": 25,
+          "created_date": "20220127"
+        },
+        {
+          "class_id": "C0112",
+          "class_gbn": "초1-2",
+          "class_nm": "클래스2",
+          "class_count": 50,
+          "class_type": "클래스2",
+          "test_rate": 72,
+          "created_date": "20221017"
+        },
+        {
+          "class_id": "C0113",
+          "class_gbn": "초2-1",
+          "class_nm": "클래스3",
+          "class_count": 15,
+          "class_type": "클래스3",
+          "test_rate": 65,
+          "created_date": "20220508"
+        },
+        {
+          "class_id": "C0114",
+          "class_gbn": "초2-2",
+          "class_nm": "클래스4",
+          "class_count": 20,
+          "class_type": "클래스4",
+          "test_rate": 45,
+          "created_date": "20220513"
+        },
+        {
+          "class_id": "C0115",
+          "class_gbn": "초3-1",
+          "class_nm": "클래스5",
+          "class_count": 30,
+          "class_type": "클래스5",
+          "test_rate": 55,
+          "created_date": "20220327"
+        },
+        {
+          "class_id": "C0116",
+          "class_gbn": "초3-2",
+          "class_nm": "클래스6",
+          "class_count": 26,
+          "class_type": "클래스6",
+          "test_rate": 15,
+          "created_date": "20220619"
+        },
+        {
+          "class_id": "C0117",
+          "class_gbn": "초4-1",
+          "class_nm": "클래스7",
+          "class_count": 60,
+          "class_type": "클래스7",
+          "test_rate": 32,
+          "created_date": "20220521"
+        },
+        {
+          "class_id": "C0118",
+          "class_gbn": "초4-2",
+          "class_nm": "클래스8",
+          "class_count": 10,
+          "class_type": "클래스8",
+          "test_rate": 85,
+          "created_date": "20220220"
+        },
+        {
+          "class_id": "C0119",
+          "class_gbn": "초5-1",
+          "class_nm": "클래스9",
+          "class_count": 37,
+          "class_type": "클래스9",
+          "test_rate": 41,
+          "created_date": "20220315"
+        },
+        {
+          "class_id": "C0120",
+          "class_gbn": "초5-2",
+          "class_nm": "클래스10",
+          "class_count": 40,
+          "class_type": "클래스10",
+          "test_rate": 50,
+          "created_date": "20220303"
+        }
+      ]
+    }
+}

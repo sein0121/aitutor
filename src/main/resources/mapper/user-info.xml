@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.agilesoda.aitutor.repository.mapper.UserInfoMapperRepository">
+
+    <select id="selectAllStudentInfoBySearchAll" parameterType="String" resultType="String">
+        select DISTINCT user_id
+        from user_info
+        where org_id = #{org_id}
+          AND user_type ='30'
+            and (class_id LIKE concat('%',#{search_nm},'%') ESCAPE '#'
+                     OR user_grd like concat('%',#{search_nm},'%' ) ESCAPE '#'
+                     OR user_id LIKE CONCAT('%',#{search_nm},'%') ESCAPE '#')
+    </select>
+
+    <select id="selectAllStudentInfoBySearchGrade" parameterType="String" resultType="String">
+        select DISTINCT user_id
+        from user_info
+        where org_id = #{org_id}
+          and user_grd LIKE concat('%', #{search_nm}, '%') ESCAPE '#'
+          AND class_id IN (SELECT class_id
+                           from class_info
+                           where org_id = #{org_id}
+                             and mgr_id = #{user_id})
+          AND user_type = '30'
+    </select>
+
+    <select id="selectAllStudentInfoBySearchClass" parameterType="String" resultType="String">
+        select DISTINCT user_id
+        from user_info
+        where org_id = #{org_id}
+          AND user_type = '30'
+          AND class_id IN (SELECT class_id
+                           from class_info
+                           where org_id = #{org_id}
+                             and mgr_id = #{user_id}
+                             AND class_id like concat('%', #{search_nm}, '%') ESCAPE '#')
+    </select>
+
+    <select id="selectAllAdminStudentInfoBySearchGrade" parameterType="String" resultType="String">
+        select DISTINCT user_id
+        from user_info
+        where org_id = #{org_id}
+          and user_grd LIKE concat('%', #{search_nm}, '%') ESCAPE '#'
+          AND user_type = '30'
+    </select>
+
+    <select id="selectAllAdminStudentInfoBySearchClass" parameterType="String" resultType="String">
+        select DISTINCT user_id
+        from user_info
+        where org_id = #{org_id}
+          and class_id LIKE concat('%', #{search_nm}, '%') ESCAPE '#'
+          AND user_type = '30'
+    </select>
+
+    <select id="selectStudentSearchInfo" parameterType="com.agilesoda.aitutor.dto.tutor.StudentListRequestDto"
+            resultType="com.agilesoda.aitutor.dto.tutor.StudentListDto">
+        SELECT ui.org_id,
+               ui.user_id                                   as student_id,
+               ui.user_grd,
+               ui.user_state,
+               ci.class_nm,
+               ui.create_date,
+               Max(uqi.user_test_level)                     AS user_qst_level,
+               COUNT(*)                                     AS all_qst_count,
+               COUNT(case when uqi.temp_gbn = 0 then 1 END) AS answer_count,
+               COUNT(case when uqi.temp_gbn = 1 then 1 END) AS submit_count,
+               COUNT(case when uqi.temp_gbn = 3 then 1 END) AS test_rate
+        FROM user_info AS ui
+                 INNER JOIN class_info AS ci ON ui.class_id = ci.class_id and ui.org_id = ci.org_id
+                 INNER JOIN user_qst_info AS uqi ON uqi.user_id = ui.user_id and uqi.org_id = ui.org_id
+        WHERE ui.user_id = #{user_id}
+          AND ui.org_id = #{org_id}
+        ORDER BY ui.create_date DESC
+        limit 1
+    </select>
+
+    <select id="selectAdminStudentSearchInfo" parameterType="com.agilesoda.aitutor.dto.tutor.StudentListRequestDto"
+            resultType="com.agilesoda.aitutor.dto.tutor.StudentListDto">
+        SELECT ui.org_id,
+               ui.user_id                                   as student_id,
+               ui.user_grd,
+               ui.user_state,
+               ci.class_nm,
+               ui.create_date,
+               Max(uqi.user_test_level)                     AS user_qst_level,
+               COUNT(*)                                     AS all_qst_count,
+               COUNT(case when uqi.temp_gbn = 0 then 1 END) AS answer_count,
+               COUNT(case when uqi.temp_gbn = 1 then 1 END) AS submit_count,
+               COUNT(case when uqi.temp_gbn = 3 then 1 END) AS test_rate
+        FROM user_info AS ui
+                 INNER JOIN class_info AS ci ON ui.class_id = ci.class_id and ui.org_id = ci.org_id
+                 INNER JOIN user_qst_info AS uqi ON uqi.user_id = ui.user_id and uqi.org_id = ui.org_id
+        where ui.org_id = #{org_id}
+          and ui.user_id = #{user_id}
+          and ui.user_type in ('30', '20')
+        ORDER BY ui.create_date DESC
+    </select>
+
+    <select id="selectClassInfo" parameterType="com.agilesoda.aitutor.dto.ClassListRequestDto"
+            resultType="com.agilesoda.aitutor.dto.tutor.ClassListDto">
+        select class_id,
+               class_gbn,
+               class_nm,
+               class_gbn,
+               create_date
+        from class_info
+        where org_id = #{org_id}
+          and class_id = #{class_id}
+        limit 1
+    </select>
+
+    <select id="selectStudentList" parameterType="com.agilesoda.aitutor.dto.ClassListRequestDto"
+            resultType="com.agilesoda.aitutor.dto.StudentResultRequestDto">
+        select ui.org_id, ui.user_id, ui.user_grd, ui.user_test_grd
+        from user_info as ui
+        where ui.org_id = #{org_id}
+          and ui.class_id = #{class_id}
+          and ui.user_type = #{user_type}
+    </select>
+
+    <select id="selectUserPassword" parameterType="com.agilesoda.aitutor.domain.UserInfo" resultType="String">
+        select user_pw
+        from user_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+    </select>
+
+    <select id="selectAllStudentInfo" parameterType="String" resultType="String">
+        select DISTINCT user_id
+        from user_info
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+    </select>
+
+    <select id="selectStudentInfo" parameterType="com.agilesoda.aitutor.dto.tutor.StudentListRequestDto"
+            resultType="com.agilesoda.aitutor.dto.tutor.StudentListDto">
+        SELECT ui.org_id,
+               ui.user_id                                   as student_id,
+               ui.user_grd,
+               ui.user_state,
+               ci.class_nm,
+               ui.create_date,
+               Max(uqi.user_test_level)                     AS user_qst_level,
+               COUNT(*)                                     AS all_qst_count,
+               COUNT(case when uqi.temp_gbn = 0 then 1 END) AS answer_count,
+               COUNT(case when uqi.temp_gbn = 1 then 1 END) AS submit_count,
+               COUNT(case when uqi.temp_gbn = 3 then 1 END) AS test_rate
+        FROM user_info AS ui
+                 INNER JOIN class_info AS ci ON ui.class_id = ci.class_id AND ui.org_id = ci.org_id
+                 INNER JOIN user_qst_info AS uqi ON uqi.user_id = ui.user_id AND uqi.org_id = ui.org_id
+        WHERE ui.user_type = '30'
+          and ui.org_id = #{org_id}
+          AND ui.class_id IN (select class_id
+                              from class_info
+                              where org_id = #{org_id}
+                                and mgr_id = #{user_id})
+        GROUP BY ui.user_id, ui.user_grd, ui.user_state, ci.class_nm
+        ORDER BY ui.create_date DESC
+    </select>
+
+    <select id="selectAdminStudentInfo" parameterType="com.agilesoda.aitutor.dto.tutor.StudentListRequestDto"
+            resultType="com.agilesoda.aitutor.dto.tutor.StudentListDto">
+        SELECT ui.org_id,
+               ui.user_id                                   as student_id,
+               ui.user_grd,
+               ui.user_state,
+               ci.class_nm,
+               ui.create_date,
+               Max(uqi.user_test_level)                     AS user_qst_level,
+               COUNT(*)                                     AS all_qst_count,
+               COUNT(case when uqi.temp_gbn = 0 then 1 END) AS answer_count,
+               COUNT(case when uqi.temp_gbn = 1 then 1 END) AS submit_count,
+               COUNT(case when uqi.temp_gbn = 3 then 1 END) AS test_rate
+        FROM user_info AS ui
+                 INNER JOIN class_info AS ci ON ui.class_id = ci.class_id and ui.org_id = ci.org_id
+                 INNER JOIN user_qst_info AS uqi ON uqi.user_id = ui.user_id and uqi.org_id = ui.org_id
+        WHERE ui.org_id = #{org_id}
+          AND ui.user_type in ('30', '20')
+          AND uqi.user_test_level != 99
+        GROUP BY ui.user_id
+        ORDER BY ui.create_date DESC
+
+    </select>
+
+    <select id="selectStudentName" parameterType="String" resultType="String">
+        select user_id
+        from user_info
+        where org_id = #{org_id}
+    </select>
+
+
+    <!--    <select id="selectMyPageInfo" parameterType="com.agilesoda.aitutor.domain.UserInfo"
+                resultType="com.agilesoda.aitutor.dto.student.UserMyPageResponseDto">
+            SELECT user_nm                                AS user_nm,
+                   user_test_grd                          AS user_test_grd,
+                   class_id                               AS class_nm,
+                   (SELECT user_nm
+                    FROM user_info
+                    WHERE org_id = #{orgId}
+                      AND user_type = '20'
+                      AND user_grd = #{userGrd}
+                      AND user_test_grd = #{userTestGrd}) AS teacher_nm
+            FROM user_info
+            WHERE org_id = #{orgId}
+              AND user_id = #{userId}
+              AND user_grd = #{userGrd}
+              AND user_test_grd = #{userTestGrd}
+            limit 1
+        </select>-->
+
+    <select id="selectUserName" parameterType="com.agilesoda.aitutor.domain.UserInfo"
+            resultType="java.util.HashMap">
+        SELECT user_nm  AS user_nm,
+               class_id AS class_id
+        FROM user_info
+        WHERE org_id = #{orgId}
+          AND user_id = #{userId}
+          AND user_grd = #{userGrd}
+          AND user_test_grd = #{userTestGrd}
+        limit 1
+    </select>
+
+
+
+    <select id="selectOverlapStudentName" parameterType="String" resultType="int">
+        select count(*)
+        from user_info
+        where org_id = #{orgId}
+          and user_id = #{studentId}
+    </select>
+
+    <select id="selectUserList" parameterType="String" resultType="com.agilesoda.aitutor.dto.tutor.UserListDto">
+        select DISTINCT ui.user_id, ui.user_state, ui.user_grd, ui.user_test_grd
+        from user_info as ui
+        where ui.org_id = #{org_id}
+          and ui.class_id = #{classId}
+        group by user_id
+    </select>
+
+    <select id="countStudent" parameterType="com.agilesoda.aitutor.dto.ClassListRequestDto" resultType="int">
+        select COUNT(*)
+        from user_info as ui
+        where ui.org_id = #{org_id}
+          and ui.class_id = #{class_id}
+          and ui.user_type = #{user_type}
+    </select>
+
+    <select id="selectClassList" parameterType="String"
+            resultType="com.agilesoda.aitutor.dto.tutor.StudentClassInfoDto">
+        SELECT class_gbn, class_id
+        FROM class_info
+        WHERE org_id = #{org_id}
+          AND mgr_id = #{user_id}
+    </select>
+
+    <select id="selectAdminStudentClassList" parameterType="String"
+            resultType="com.agilesoda.aitutor.dto.tutor.StudentClassInfoDto">
+        SELECT class_gbn, class_id
+        FROM class_info
+        WHERE org_id = #{org_id}
+    </select>
+
+    <select id="selectClassChangeList" parameterType="String"
+            resultType="com.agilesoda.aitutor.dto.admin.AdminClassChangeInfoDto">
+        SELECT ci.class_id, ci.mgr_id AS teacher_id, ci.class_gbn, ci.class_state, ui.user_nm AS teacher_nm
+        FROM class_info AS ci
+                 INNER JOIN user_info AS ui ON ui.class_id = ci.class_id
+        WHERE ci.org_id = #{org_id}
+          AND ci.mgr_id = ui.user_id
+    </select>
+
+    <select id="selectUserState" parameterType="String" resultType="String">
+        select user_state
+        from user_info
+        WHERE org_id = #{org_id}
+          AND user_id = #{user_id}
+          AND user_grd = #{user_grd}
+          AND user_test_grd = #{user_test_grd}
+    </select>
+
+    <select id="selectTutorUserState" parameterType="String" resultType="String">
+        select user_state
+        from user_info
+        WHERE org_id = #{org_id}
+          AND user_id = #{user_id}
+          AND user_grd = #{user_grd}
+    </select>
+
+    <select id="selectTutorUserClassGbn" parameterType="String" resultType="String">
+        select ci.class_gbn
+        from user_info AS ui
+                 INNER JOIN class_info AS ci ON ci.class_id = ui.class_id and ci.org_id = ui.org_id
+        WHERE ui.org_id = #{org_id}
+          AND ui.user_id = #{user_id}
+          AND ui.user_grd = #{user_grd}
+
+    </select>
+
+    <select id="studentDetailSave" parameterType="String">
+        UPDATE user_info SET user_state = #{user_state}
+        <if test="new_password != null">
+            , user_pw = #{new_password}
+        </if>
+        WHERE org_id=#{org_id}
+        and user_id=#{user_id}
+        AND user_grd=#{user_grd}
+        AND user_test_grd = #{user_test_grd}
+    </select>
+
+    <delete id="deleteStudent" parameterType="string">
+        DELETE
+        FROM user_info
+        WHERE user_id = #{student_id}
+          AND user_type = '30'
+          AND class_id in (select class_id
+                           from class_info
+                           where org_id = #{org_id}
+                             and mgr_id = #{user_id})
+    </delete>
+
+    <delete id="deleteAdminStudent" parameterType="string">
+        DELETE
+        FROM user_info
+        WHERE user_id = #{student_id}
+          AND user_type = '30'
+          AND org_id = #{org_id}
+    </delete>
+
+    <select id="automakeStudentId" parameterType="String" resultType="int">
+        select count(*)
+        from user_info
+        where org_id = #{orgId}
+          and user_id = #{studentId}
+    </select>
+
+    <select id="selectIdList" parameterType="String" resultType="com.agilesoda.aitutor.dto.tutor.IdListDto">
+        select user_id AS student_id
+        from user_info
+        WHERE user_id LIKE CONCAT('%', #{class_id}, '%')
+          and org_id = #{org_id}
+    </select>
+
+    <update id="studentPwReset" parameterType="String">
+        UPDATE user_info
+        SET user_pw=#{reset_pw}
+        WHERE org_id = #{org_id}
+          AND user_id = #{reset_id}
+    </update>
+
+    <select id="selectClassInfos" parameterType="com.agilesoda.aitutor.dto.ClassListRequestDto"
+            resultType="com.agilesoda.aitutor.dto.admin.AdminClassListDto">
+        select class_id,
+               class_gbn,
+               class_nm,
+               class_gbn,
+               create_date
+        from class_info
+        where org_id = #{org_id}
+          and class_id = #{class_id}
+        limit 1
+    </select>
+
+    <update id="updatePassword" parameterType="com.agilesoda.aitutor.domain.UserInfo">
+        update user_info
+        set user_pw = #{password}
+        <if test="userNm != null">
+            , user_nm = #{userNm}
+        </if>
+        where org_id = #{orgId}
+        and user_id = #{userId}
+        <if test="userGrd != null">
+            and user_grd = #{userGrd}
+        </if>
+        <if test="userTestGrd != null">
+            and user_test_grd = #{userTestGrd}
+        </if>
+    </update>
+
+    <select id="selectUserInfoList" parameterType="String"
+            resultType="com.agilesoda.aitutor.dto.admin.SuperAdminUserDto">
+        select user_id, user_type, user_nm
+        from user_info
+        where org_id = #{org_id}
+          and user_type != #{user_type}
+    </select>
+
+    <select id="selectTutorInfo" parameterType="String" resultType="com.agilesoda.aitutor.dto.admin.TutorList">
+        select user_id as teacher_id, user_nm as teacher_nm
+        from user_info
+        where org_id = #{org_id}
+          and user_type = #{user_type}
+        order by create_date desc
+    </select>
+
+    <update id="resetPassword" parameterType="String">
+        update user_info
+        set user_pw = #{user_pw}
+        where org_id = #{org_id}
+          and user_id = #{user_id}
+    </update>
+
+    <select id="selectTutorName" parameterType="com.agilesoda.aitutor.domain.UserInfo"
+            resultType="com.agilesoda.aitutor.dto.tutor.TutorMyPageResponseDto">
+        select user_nm
+        from user_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_type = #{userType}
+    </select>
+
+    <select id="selectUserNameCount" parameterType="String" resultType="int">
+        select count(*)
+        from user_info
+        where org_id = #{org_id}
+          and user_nm = #{user_name}
+    </select>
+
+    <select id="selectUserNm" parameterType="String" resultType="String">
+        select user_nm
+        from user_info
+        where org_id = #{org_id}
+          and user_id = #{mgrId}
+    </select>
+
+    <select id="checkExistStudent" parameterType="String" resultType="int">
+        select exists(select user_id from user_info where org_id = #{org_id} and class_id = #{class_id})
+    </select>
+
+    <select id="selectTeacherName" parameterType="String"
+            resultType="String">
+        select user_nm
+        from user_info
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_type = #{userType}
+    </select>
+</mapper>

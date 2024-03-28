@@ -1,0 +1,10 @@
+<svg id="icon_time" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_32" data-name="사각형 32" width="22" height="22" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_9" data-name="그룹 9" clip-path="url(#clip-path)">
+    <path id="패스_1846" data-name="패스 1846" d="M11,0h0A11,11,0,1,0,22,11,11,11,0,0,0,11,0m7.362,12.485H11.174a.654.654,0,0,1-.655-.655V4.642a.655.655,0,0,1,1.309,0v6.534h6.533a.655.655,0,0,1,0,1.309" fill="#fff"/>
+  </g>
+</svg>

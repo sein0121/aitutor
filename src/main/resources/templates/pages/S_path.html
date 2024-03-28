@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="gnb">
+            <div class="left_wrap">
+                <a href="#none"><div class="logo"></div></a>
+                <div class="sys_name">AI Tutor</div>
+            </div>
+            <div class="center_wrap">
+                <span class="testlist" id="testlist">초5-1 불꽃수학</span>
+                <ul id="testlist_popup">
+                    <li>초5-1 불꽃수학</li>
+                    <li>초5-2 수학천재들</li>
+                </ul>
+            </div>
+            <div class="right_wrap">
+                <div class="user"></div>
+                <div class="help"></div>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="step_wrap">
+                <div class="step"><a href="#none"><img src="/image/icon_check.svg">1차 테스트 완료<br>결과보기</a></div>
+                <span class="arrow"></span>
+                <div class="step"><a href="#none"><img src="/image/icon_check.svg">2차 테스트 완료<br>결과보기</a></div>
+                <span class="arrow"></span>
+                <div class="step"><a href="#none"><img src="/image/icon_test.svg">3차 테스트 진행중<br>이어하기</a></div>
+                <span class="arrow"></span>
+                <div class="step"><img src="/image/icon_path.svg">최종경로보기</div>
+            </div>
+            <div class="result_wrap">
+                <div class="bg">
+                    <div class="title_area">
+                        <div class="btn">
+                            <span class="btn_graph" id="view_graph"><i></i>그래프 보기</span>
+                        </div>
+                    </div>
+                    <div class="result_list">
+                        <table class="path">
+                            <thead>
+                                <tr>
+                                    <th>수학 영역</th>
+                                    <th>난이도</th>
+                                    <th>학습 경로</th>
+                                    <th>잘해요!</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>문자와식</td>
+                                    <td><span class="testlevel-ms">중등1-1</span></td>
+                                    <td class="left"><span>자의 사용과 기호의 생략 일차방정식의 풀이 일차방정식 (1) - 수</span><i class="path_arrow"></i><span>일차방정식 (4) - 원가, 정가</span></td>
+                                    <td>다항식과 일차식<br>방정식과 항등식<br>일차식의 덧셈과 뺄셈</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">문자와식</td>
+                                    <td><span class="testlevel-es">초등1-1</span></td>
+                                    <td class="left">
+                                        <span>공간에서의 위치 관계 다각형의 내각과 외각의 크기의 합</span><i class="path_arrow"></i><span>원의 둘레의 길이와 넓이</span><i class="path_arrow"></i><span>부채꼴의 호의 길이와 넓이</span><i class="path_arrow"></i><span>구의 부피</span>
+                                    </td>
+                                    <td>다항식과 일차식<br>방정식과 항등식<br>일차식의 덧셈과 뺄셈</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="testlevel-hs">고등1-1</span></td>
+                                    <td class="left">
+                                        <span>원기둥</span><i class="path_arrow"></i><span>구</span>
+                                    </td>
+                                    <td>다항식과 일차식<br>방정식과 항등식<br>일차식의 덧셈과 뺄셈</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>                
+            </div>            
+        </div>
+        <div id="graph">
+           
+        </div>
+        <div id="modal_bg"></div>
+    </div>
+    
+    <script>
+        document.getElementById("view_graph").onclick = function() {
+            document.getElementById("graph").style.right="0";
+            document.getElementById("modal_bg").style.display="block";
+        }
+    </script>
+    
+</body>
+</html>

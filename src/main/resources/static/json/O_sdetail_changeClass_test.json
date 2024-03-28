@@ -1,0 +1,35 @@
+{
+  "rsp_code": 200,
+  "result": {
+    "class_list":[
+      {
+        "class_id":"불꽃수학",
+        "teacher_id":"pack",
+        "teacher_nm": "박수학",
+        "class_gbn": "초5-1",
+        "class_state": 0
+      },
+      {
+        "class_id":"수학A",
+        "teacher_id":"lee",
+        "teacher_nm": "이수학",
+        "class_gbn": "초6-1",
+        "class_state": 1
+      },
+      {
+        "class_id":"불꽃수학(2)",
+        "teacher_id":"kim",
+        "teacher_nm": "김수학",
+        "class_gbn": "초5-1",
+        "class_state": 1
+      },
+      {
+        "class_id":"불꽃수학",
+        "teacher_id":"ro",
+        "teacher_nm": "노수학",
+        "class_gbn": "중3-1",
+        "class_state": 0
+      }
+    ]
+  }
+}

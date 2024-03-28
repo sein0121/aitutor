@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.agilesoda.aitutor.repository.mapper.UserQstHistoryRepository">
+
+    <insert id="createQstHistory" parameterType="com.agilesoda.aitutor.domain.UserQstHistory">
+        insert into user_qst_history (org_id, user_id, user_grd, user_test_grd, user_test_level, qst_id, in_date)
+        values (#{orgId}, #{userId}, #{userGrd}, #{userTestGrd}, #{userTestLevel}, #{qstId}, #{inDate})
+    </insert>
+
+    <update id="updateQstHistory" parameterType="com.agilesoda.aitutor.domain.UserQstHistory">
+        update user_qst_history
+        set out_date = #{outDate}
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+          and qst_id = #{qstId}
+        order by id desc
+        limit 1
+    </update>
+
+    <update id="updateChgYn" parameterType="com.agilesoda.aitutor.domain.UserQstHistory">
+        update user_qst_history
+        set chg_yn = 'y'
+        where org_id = #{orgId}
+          and user_id = #{userId}
+          and user_grd = #{userGrd}
+          and user_test_grd = #{userTestGrd}
+          and user_test_level = #{userTestLevel}
+          and qst_id = #{qstId}
+        order by id desc
+        limit 1
+    </update>
+
+</mapper>

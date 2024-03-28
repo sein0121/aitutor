@@ -1,0 +1,45 @@
+server:
+  port: 9000
+  #=========================================
+  # error 처리
+  #=========================================
+  error:
+    #오류 응답에 exception의 내용을 포함할지 여부
+    include-exception: TRUE
+    #오류 응답에 stacktrace 내용을 포함할지 여부 (ALWAYS, NEVER, ON_TRACE_PARAM)
+    include-stacktrace: ALWAYS
+    #브라우저 요청에 대해 서버 오류시 기본으로 노출할 페이지를 사용할지 여부
+    whitelabel:
+      enabled: FALSE
+
+
+spring:
+  application:
+    name: custom-app
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+
+  #=========================================
+  # mysql
+  #=========================================
+  datasource:
+    url: jdbc:mysql://192.168.100.211:30000/aitutor?CharacterEncoding=UTF-8
+    username: agilesoda
+    password: agilesoda1!
+
+#=========================================
+# mybatis 관련 설정
+#=========================================
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+# 로그 레벨 설정
+logging:
+  level:
+    com.agilesoda: DEBUG

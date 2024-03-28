@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>EduSoDA - AgileSoDA</title>
+</head>
+<body>
+<div class="container">
+    <div class="gnb">
+        <div class="left_wrap">
+            <a href="/aitutor/agilesoda/admin"><div class="logo"></div></a>
+            <a href="/aitutor/agilesoda/admin"><div class="sys_name">EduSoDA<span id="sys_name"></span></div></a>
+        </div>
+        <div class="center_wrap menu">
+            <span class="current"><img src="/image/gnb_icon_setting.svg">계정 관리</span>
+        </div>
+        <div class="right_wrap">
+            <div class="user">
+                <div class="user" id="user_open_btn">
+                    <div class="user_modal" id="user_modal">
+                        <ul>
+                            <li id="logout" style="margin-left: 7px">로그아웃</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="help" id="help"></div>
+        </div>
+    </div>
+    <div class="content tpage">
+        <div class="topcontentbox">
+            <div class="inner">
+                <div class="tabgroup">
+                    <span class = "current" id="now-elementary">초등학교 계정관리</span>
+                    <span id="now-middle">중학교 계정관리</span>
+                    <span id="now-academy">학원 계정관리</span>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox">
+            <div class="inner col2">
+                <div style="width: 300px; flex:none">
+                    <div class="title">
+                        <h3>그룹</h3>
+                        <div class="btnbox">
+                            <button type="button" id="group-save"><i><img src="/image/icon_save.svg"></i>저장</button>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <table id="org-table">
+                            <thead>
+                            <tr>
+                                <th style="width: 40%;">그룹 ID</th>
+                                <th style="width: 60%;">학교 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody id="org-body">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination" id="group-pagination">
+                    </div>
+                </div>
+                <div>
+                    <div class="title">
+                        <h3 id="org-title"></h3>
+                        <div class="btnbox">
+                            <button type="button" id="pass-save"><i><img src="/image/icon_save.svg"></i>저장</button>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <table id="user-table">
+                            <thead>
+                            <tr>
+                                <th style="width: 20%;">사용자 ID</th>
+                                <th>비밀번호</th>
+                                <th style="width: 20%;">권한</th>
+                                <th style="width: 20%;">사용자 이름</th>
+                            </tr>
+                            </thead>
+                            <tbody id="user-body">
+                            <tr>
+                                <td id="user-id">A0</td>
+                                <td><input type="text" id = "reset_pass" value="" style="width: 150px;">
+                                    <button type="button" class="btn_gray" onclick="resetPassword()">리셋</button></td>
+                                <td id="user-type">관리자</td>
+                                <td id="user-name">ADMIN</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination" id="pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--저장 Modal-->
+<div id="modal_save">
+    <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+    <div class="icon"><img src="/image/icon_download.svg"></div>
+    <p>사용 가이드 다운로드</p>
+    <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+    <div class="btngroup">
+        <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+        <button type="text" id="save">확인</button>
+    </div>
+</div>
+<div id="modal_bg"></div>
+
+<!--Script-->
+<script th:src="@{/js/logout.js}"></script>
+<script th:src="@{/js/admin.js}"></script>
+<script th:src="@{/js/moveMypage.js}"></script>
+<script th:src="@{/js/resetPassword.js}"></script>
+<script th:src="@{/js/api-lib.js}"></script>
+<script th:src="@{/js/api.js}"></script>
+<script th:src="@{/js/save.js}"></script>
+
+</body>
+</html>

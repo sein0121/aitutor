@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <!--그래프-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML'></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #graph_area {
+            width: 100%;
+            height: 100%;
+            border: 1px solid lightgray;
+        }
+    </style>
+
+    <title>EduSoDA - 결과</title>
+</head>
+<body>
+    <div class="container">
+        <div class="gnb">
+            <div class="left_wrap">
+                <a href=""><div class="logo"></div></a>
+                <div class="sys_name"><a href="" style="color:#ffffff;">EduSoDA</a></div>
+            </div>
+            <div class="center_wrap">
+<!--                <span class="testlist" id="testlist">초5-1 불꽃수학</span>-->
+<!--                <ul id="testlist_popup">-->
+<!--                    <li>초5-1 불꽃수학</li>-->
+<!--                    <li>초5-2 수학천재들</li>-->
+<!--                </ul>-->
+            </div>
+            <div class="right_wrap">
+                <div class="user" id="user_open_btn">
+                    <div class="user_modal" id="user_modal">
+                        <ul>
+                            <li onclick="moveMypage()">마이페이지</li>
+                            <li id="logout">로그아웃</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="help" id="help"></div>
+            </div>            
+        </div>
+        <div class="content">
+            <div class="step_wrap" id="test_result">
+<!--                <div class="step" id="stepDiv_0" style="display: none" onclick="result_list_change(this.id)"><a href="#none"><img src="/image/icon_check.svg" id="stepImage_0">1차 테스트 완료<br>결과보기</div>-->
+<!--                <span class="arrow" id="stepSpan_0" style="display: none"></span>-->
+<!--                <div class="step" id="stepDiv_1" style="display: none" onclick="result_list_change(this.id)"><img src="/image/icon_check.svg" id="stepImage_1"><p id="test_level2_txt">2차 테스트</div>-->
+<!--                <span class="arrow" id="stepSpan_1" style="display: none"></span>-->
+<!--                <div class="step" id="stepDiv_2" style="display: none" onclick="result_list_change(this.id)"><img src="/image/icon_test.svg" id="stepImage_2"><p id="test_level3_txt">3차 테스트</p></div>-->
+<!--                <span class="arrow_last" id="stepSpan_2" style="display: none"></span>-->
+<!--                <div class="step" id="stepPath" style="display: none" onclick="user_path_view(this.id)"><img src="/image/icon_path.svg">최종경로보기</div>-->
+            </div>
+            <div class="result_wrap">
+                <div class="bg">
+                    <div class="title_area" id="title_area">
+                        <span class="time" id="title_time_span" style="display: none"> 소요시간  </span>
+                        <div class="count" id="title_count_div" style="display: none">
+                            <span class="total" id="test_total_span">문항  </span>
+                            <span class="correct" id="test_correct_span">정답  </span>
+                            <span class="wrong" id="test_wrong_span">오답  </span>
+                        </div>
+                        <div class="btn" id="title_btn_div" style="display: none">
+                            <span class="btn_best" id ="recommend_content"><i></i>추천 콘텐츠</span>
+                            <span class="btn_graph" id="view_graph"><i></i>그래프 보기</span>
+                        </div>
+                    </div>
+                    <div class="result_list" id="result_list_div">
+                        <ul id="result_list_head" style="display: none">
+                            <li class="head" id="li_head"><span>문제</span><span>단원</span><span>제출</span><span>정답</span><span>채점</span></li>
+                        </ul>
+                        <table class="path" id="result_list_table" style="display: none">
+                            <thead><tr><th>수학 영역</th><th>학기</th><th>학습 경로</th><th>잘해요!</th></tr></thead>
+                            <tbody id="table_tbody"></tbody>
+                        </table>
+<!--                        <ul id="result_list_head">-->
+<!--                            <li class="head" id="li_head"><span> </span><span> </span><span> </span><span> </span><span> </span></li>-->
+<!--                            <li id="result_list_li"><span>1</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>2</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>3</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>4</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>5</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_X.svg"></span></li>-->
+<!--                            <li><span>6</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>7</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>8</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>9</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>10</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>11</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>12</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>13</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>14</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>15</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>16</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                            <li><span>17</span><span>반비례관계와 그 그래프</span><span>1</span><span>1</span><span><img src="image/img_o.svg"></span></li>-->
+<!--                        </ul>-->
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div id="graph">
+            <div class="loader">
+                <div class="loader-inner ball-spin-fade-loader" id="loadingBar">
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                    <div style="background-color: var(--purple);"></div>
+                </div>
+            </div>
+            <div class="graph_area" id="graph_area">
+
+            </div>
+        </div>
+        <div id="graph_small">
+            <div class="container answer_popup">
+                <div class="test_area" id="test_area" style="display: none">
+                    <div class="title">
+                        <span class="num" id="test-num"></span>
+                        <span id="test-level"></span>
+                        <span id="test-title"></span>
+                    </div>
+                    <div class="q_box">
+                        <img id="test-img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="modal_save">
+        <div class="btn_close" id="save_close_btn"><img src="/image/btn_modal_close.svg"></div>
+        <div class="icon"><img src="/image/icon_download.svg"></div>
+        <p>사용 가이드 다운로드</p>
+        <p>EduSoDA 사용 가이드 파일을 다운로드 받으시겠습니까?</p>
+        <div class="btngroup">
+            <button type="text" class="btn_cancel" id="save_cancel_btn">취소</button>
+            <button type="text" id="save">확인</button>
+        </div>
+    </div>
+
+<!--  추천콘텐츠 이미지 띄우기-->
+    <div id="modal" style="padding: 0; width: 50%;">
+        <img style="width: 100%;" src="/image/img_best.png" id="img_best">
+    </div>
+
+    <div id="modal_bg"></div>
+    <div id="modal_bg_down" style="display: none; padding-left: 43%; padding-top: 15%;">
+        <div class="loader">
+            <div class="loader-inner ball-spin-fade-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Script-->
+<!--    <script th:src="text/javascript" src="js/S_result.js"></script>-->
+    <script th:src="@{/js/S_result.js}"></script>
+    <script th:src="@{/js/moveMypage.js}"></script>
+    <script th:src="@{/js/graphDraw.js}"></script>
+    <script th:src="@{/js/api-lib.js}"></script>
+    <script th:src="@{/js/api.js}"></script>
+    <script th:src="@{/js/logout.js}"></script>
+    <script th:src="@{/js/save.js}"></script>
+</body>
+</html>
