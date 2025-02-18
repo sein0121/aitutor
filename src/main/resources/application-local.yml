@@ -25,9 +25,9 @@ spring:
   # mysql
   #=========================================
   datasource:
-    url: jdbc:mysql://192.168.100.211:30000/aitutor?CharacterEncoding=UTF-8
+    url: jdbc:mysql://192.168.100.XXX:30000/aitutor?CharacterEncoding=UTF-8
     username: agilesoda
-    password: agilesoda1!
+    password: passwd
 
 #=========================================
 # mybatis 관련 설정
